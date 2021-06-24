@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = "276109197611-ue1ounudsot2j7efbrvi56s7l23hncon.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-        print(GIDSignIn.sharedInstance()?.currentUser?.profile.email ?? "nil")
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = GIDSignIn.sharedInstance()?.currentUser == nil ? RegisterLoginViewController() : ContactViewController()
         self.window?.makeKeyAndVisible()
@@ -35,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             return
         }
         let contactVC = ContactViewController()
-        //contactVC.modalPresentationStyle = .fullScreen
         self.window?.rootViewController = contactVC
     }
     

@@ -21,17 +21,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7s-Bf-hfq" customClass="GIDSignInButton">
-                    <rect key="frame" x="122" y="429" width="170" height="48"/>
+                    <rect key="frame" x="122" y="424" width="170" height="48"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="Yri-MO-4kM"/>
+                        <constraint firstAttribute="height" constant="48" id="p7b-VY-cTv"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="r7s-Bf-hfq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M9J-zA-t9S"/>
-                <constraint firstItem="r7s-Bf-hfq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="122" id="Pzi-Kp-OWH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r7s-Bf-hfq" secondAttribute="bottom" constant="385" id="RKo-O9-g10"/>
-                <constraint firstItem="r7s-Bf-hfq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="385" id="g1y-ch-Bhm"/>
+                <constraint firstItem="r7s-Bf-hfq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Cf8-tM-xKt"/>
+                <constraint firstItem="r7s-Bf-hfq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qEv-eI-KJB"/>
             </constraints>
             <point key="canvasLocation" x="-94.20289855072464" y="108.48214285714285"/>
         </view>

@@ -28,13 +28,15 @@ class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
             return
         }
          
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let contactVC = ContactViewController(nibName: "ContactViewController", bundle: nil)
         contactVC.modalPresentationStyle = .fullScreen
-        self.present(contactVC, animated: false, completion: nil)
+        appDelegate.window?.rootViewController = contactVC
         
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
     }
+    
 }

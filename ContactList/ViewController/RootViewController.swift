@@ -36,7 +36,7 @@ class RootViewController: UIViewController, GIDSignInDelegate {
             return
         }
          
-        goToContactVC()
+        showContactVC()
         
     }
     
@@ -46,22 +46,25 @@ class RootViewController: UIViewController, GIDSignInDelegate {
     
     func checkLoggedIsUser(){
         guard let _ = GIDSignIn.sharedInstance()?.currentUser else {
-            goToRegisterLogin()
+            showRegisterLoginVC()
             return
         }
-        goToContactVC()
+        showContactVC()
     }
     
-    func goToContactVC(){
+    func showContactVC(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let contactVC = ContactViewController(nibName: "ContactViewController", bundle: nil)
         contactVC.modalPresentationStyle = .fullScreen
-        self.present(contactVC, animated: false, completion: nil)
+        appDelegate.window?.rootViewController = contactVC
+        
     }
     
-    func goToRegisterLogin(){
+    func showRegisterLoginVC(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let registerLoginVC = RegisterLoginViewController(nibName: "RegisterLoginViewController", bundle: nil)
         registerLoginVC.modalPresentationStyle = .fullScreen
-        self.present(registerLoginVC, animated: false, completion: nil)
+        appDelegate.window?.rootViewController = registerLoginVC
     }
     
     

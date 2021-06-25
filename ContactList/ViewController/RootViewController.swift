@@ -53,18 +53,17 @@ class RootViewController: UIViewController, GIDSignInDelegate {
     }
     
     func showContactVC(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let contactVC = ContactViewController(nibName: "ContactViewController", bundle: nil)
-        contactVC.modalPresentationStyle = .fullScreen
-        appDelegate.window?.rootViewController = contactVC
-        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        appDelegate.window?.rootViewController = ContactViewController()
     }
     
     func showRegisterLoginVC(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let registerLoginVC = RegisterLoginViewController(nibName: "RegisterLoginViewController", bundle: nil)
-        registerLoginVC.modalPresentationStyle = .fullScreen
-        appDelegate.window?.rootViewController = registerLoginVC
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        appDelegate.window?.rootViewController = RegisterLoginViewController()
     }
     
     

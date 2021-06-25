@@ -28,10 +28,10 @@ class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
             return
         }
          
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let contactVC = ContactViewController(nibName: "ContactViewController", bundle: nil)
-        contactVC.modalPresentationStyle = .fullScreen
-        appDelegate.window?.rootViewController = contactVC
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        appDelegate.window?.rootViewController = ContactViewController()
         
     }
     

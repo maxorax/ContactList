@@ -25,11 +25,12 @@ class ContactViewController: UIViewController {
     }
 
     @IBAction func signOut(_ sender: Any) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
         GIDSignIn.sharedInstance().signOut()
-        let registerLoginVC = RegisterLoginViewController()
-        registerLoginVC.modalPresentationStyle = .fullScreen
-        self.present(registerLoginVC, animated: false, completion: nil)
+        appDelegate.window?.rootViewController = RegisterLoginViewController()
     }
-   
+    
 
 }

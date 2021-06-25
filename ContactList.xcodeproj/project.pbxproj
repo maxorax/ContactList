@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		B54D50242685B0790069884F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D50222685B0790069884F /* RootViewController.swift */; };
 		B54D50252685B0790069884F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54D50232685B0790069884F /* RootViewController.xib */; };
+		B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */; };
 		B570C1A12682008D00F020A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1A02682008D00F020A8 /* AppDelegate.swift */; };
 		B570C1AA2682009200F020A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B570C1A92682009200F020A8 /* Assets.xcassets */; };
 		B570C1BC2682012B00F020A8 /* RegisterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */; };
 		B570C1BD2682012B00F020A8 /* RegisterLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */; };
 		B5B58C9526848A6D00652581 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5B58C9426848A6D00652581 /* GoogleService-Info.plist */; };
 		B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B58C9826849B5E00652581 /* ContactViewController.swift */; };
-		B5B58C9B26849B5E00652581 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B58C9926849B5E00652581 /* ContactViewController.xib */; };
 		BC4EE1BE75B9FD2E2AAB6850 /* Pods_ContactList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B18BF7118AE9157EF423D /* Pods_ContactList.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +23,7 @@
 		01A12B75B7147CE72FCEE2EF /* Pods-ContactList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactList.debug.xcconfig"; path = "Target Support Files/Pods-ContactList/Pods-ContactList.debug.xcconfig"; sourceTree = "<group>"; };
 		B54D50222685B0790069884F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B54D50232685B0790069884F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
 		B570C19D2682008D00F020A8 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B570C1A02682008D00F020A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B570C1A92682009200F020A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterLoginViewController.xib; sourceTree = "<group>"; };
 		B5B58C9426848A6D00652581 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5B58C9826849B5E00652581 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		B5B58C9926849B5E00652581 /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
 		CC8B18BF7118AE9157EF423D /* Pods_ContactList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E032F1EFB6C929ED40F3B7DE /* Pods-ContactList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactList.release.xcconfig"; path = "Target Support Files/Pods-ContactList/Pods-ContactList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */,
-				B5B58C9926849B5E00652581 /* ContactViewController.xib */,
+				B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */,
 				B54D50232685B0790069884F /* RootViewController.xib */,
 			);
 			path = XIB;
@@ -177,7 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B570C1BD2682012B00F020A8 /* RegisterLoginViewController.xib in Resources */,
-				B5B58C9B26849B5E00652581 /* ContactViewController.xib in Resources */,
+				B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */,
 				B54D50252685B0790069884F /* RootViewController.xib in Resources */,
 				B570C1AA2682009200F020A8 /* Assets.xcassets in Resources */,
 				B5B58C9526848A6D00652581 /* GoogleService-Info.plist in Resources */,

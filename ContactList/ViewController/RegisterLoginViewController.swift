@@ -7,8 +7,13 @@
 
 import UIKit
 import GoogleSignIn
+import GoogleAPIClientForREST
 
 class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
+    
+    private let scopes = [kGTLRAuthScopePeopleServiceContactsReadonly]
+    private let service = GTLRPeopleServiceService()
+    private var accessToken: String?
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     override func viewDidLoad() {
@@ -27,11 +32,13 @@ class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
             }
             return
         }
-         
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        appDelegate.window?.rootViewController = ContactViewController()
+        let navController = UINavigationController()
+        appDelegate.window?.rootViewController = navController
+        navController.pushViewController(ContactViewController(), animated: false)
         
     }
     
@@ -40,3 +47,4 @@ class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
     }
     
 }
+

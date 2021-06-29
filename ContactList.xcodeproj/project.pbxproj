@@ -10,6 +10,11 @@
 		B54D50242685B0790069884F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D50222685B0790069884F /* RootViewController.swift */; };
 		B54D50252685B0790069884F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54D50232685B0790069884F /* RootViewController.xib */; };
 		B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */; };
+		B55131D42685ED0A0043FAA2 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55131D22685ED0A0043FAA2 /* ContactTableViewCell.swift */; };
+		B55131D52685ED0A0043FAA2 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131D32685ED0A0043FAA2 /* ContactTableViewCell.xib */; };
+		B55131D92685F3930043FAA2 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */; };
+		B55131DA2685F3930043FAA2 /* ContactInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */; };
+		B5649D262686024F00F36952 /* Peoples.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5649D252686024F00F36952 /* Peoples.swift */; };
 		B570C1A12682008D00F020A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1A02682008D00F020A8 /* AppDelegate.swift */; };
 		B570C1AA2682009200F020A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B570C1A92682009200F020A8 /* Assets.xcassets */; };
 		B570C1BC2682012B00F020A8 /* RegisterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */; };
@@ -24,6 +29,11 @@
 		B54D50222685B0790069884F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B54D50232685B0790069884F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
+		B55131D22685ED0A0043FAA2 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		B55131D32685ED0A0043FAA2 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
+		B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoViewController.xib; sourceTree = "<group>"; };
+		B5649D252686024F00F36952 /* Peoples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peoples.swift; sourceTree = "<group>"; };
 		B570C19D2682008D00F020A8 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B570C1A02682008D00F020A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B570C1A92682009200F020A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +102,7 @@
 				B570C1A92682009200F020A8 /* Assets.xcassets */,
 				B570C1AE2682009200F020A8 /* Info.plist */,
 				B5B58C9426848A6D00652581 /* GoogleService-Info.plist */,
+				B5649D252686024F00F36952 /* Peoples.swift */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -99,7 +110,9 @@
 		B5B58CA72684BF0800652581 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B55131D22685ED0A0043FAA2 /* ContactTableViewCell.swift */,
 				B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */,
+				B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */,
 				B5B58C9826849B5E00652581 /* ContactViewController.swift */,
 				B54D50222685B0790069884F /* RootViewController.swift */,
 			);
@@ -112,6 +125,8 @@
 				B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */,
 				B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */,
 				B54D50232685B0790069884F /* RootViewController.xib */,
+				B55131D32685ED0A0043FAA2 /* ContactTableViewCell.xib */,
+				B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -176,10 +191,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55131D52685ED0A0043FAA2 /* ContactTableViewCell.xib in Resources */,
 				B570C1BD2682012B00F020A8 /* RegisterLoginViewController.xib in Resources */,
 				B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */,
 				B54D50252685B0790069884F /* RootViewController.xib in Resources */,
 				B570C1AA2682009200F020A8 /* Assets.xcassets in Resources */,
+				B55131DA2685F3930043FAA2 /* ContactInfoViewController.xib in Resources */,
 				B5B58C9526848A6D00652581 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,9 +268,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */,
+				B55131D42685ED0A0043FAA2 /* ContactTableViewCell.swift in Sources */,
+				B5649D262686024F00F36952 /* Peoples.swift in Sources */,
 				B570C1BC2682012B00F020A8 /* RegisterLoginViewController.swift in Sources */,
 				B54D50242685B0790069884F /* RootViewController.swift in Sources */,
 				B570C1A12682008D00F020A8 /* AppDelegate.swift in Sources */,
+				B55131D92685F3930043FAA2 /* ContactInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

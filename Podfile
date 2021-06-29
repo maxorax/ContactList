@@ -7,4 +7,5 @@ target 'ContactList' do
 
   # Pods for ContactList
   pod 'GoogleSignIn'
+  pod 'Alamofire', '~> 5.2'
 end

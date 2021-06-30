@@ -96,39 +96,71 @@
 		B570C19F2682008D00F020A8 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				B5B58CA82684BF1200652581 /* XIB */,
-				B5B58CA72684BF0800652581 /* ViewController */,
+				B5B9C892268C9B3600D5E28F /* ContactTableViewCell */,
+				B5B9C890268C9B1F00D5E28F /* ContactViewController */,
+				B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */,
+				B5B9C88E268C9AD700D5E28F /* RegisterLoginViewController */,
+				B5B9C88D268C9AC600D5E28F /* RootViewController */,
 				B570C1A02682008D00F020A8 /* AppDelegate.swift */,
 				B570C1A92682009200F020A8 /* Assets.xcassets */,
 				B570C1AE2682009200F020A8 /* Info.plist */,
 				B5B58C9426848A6D00652581 /* GoogleService-Info.plist */,
-				B5649D252686024F00F36952 /* Peoples.swift */,
+				B5B9C895268C9B5D00D5E28F /* Entity */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
 		};
-		B5B58CA72684BF0800652581 /* ViewController */ = {
+		B5B9C88D268C9AC600D5E28F /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B55131D22685ED0A0043FAA2 /* ContactTableViewCell.swift */,
-				B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */,
-				B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */,
-				B5B58C9826849B5E00652581 /* ContactViewController.swift */,
+				B54D50232685B0790069884F /* RootViewController.xib */,
 				B54D50222685B0790069884F /* RootViewController.swift */,
 			);
-			path = ViewController;
+			path = RootViewController;
 			sourceTree = "<group>";
 		};
-		B5B58CA82684BF1200652581 /* XIB */ = {
+		B5B9C88E268C9AD700D5E28F /* RegisterLoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */,
 				B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */,
-				B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */,
-				B54D50232685B0790069884F /* RootViewController.xib */,
-				B55131D32685ED0A0043FAA2 /* ContactTableViewCell.xib */,
+			);
+			path = RegisterLoginViewController;
+			sourceTree = "<group>";
+		};
+		B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */,
 				B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */,
 			);
-			path = XIB;
+			path = ContactInfoViewController;
+			sourceTree = "<group>";
+		};
+		B5B9C890268C9B1F00D5E28F /* ContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */,
+				B5B58C9826849B5E00652581 /* ContactViewController.swift */,
+			);
+			path = ContactViewController;
+			sourceTree = "<group>";
+		};
+		B5B9C892268C9B3600D5E28F /* ContactTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B55131D32685ED0A0043FAA2 /* ContactTableViewCell.xib */,
+				B55131D22685ED0A0043FAA2 /* ContactTableViewCell.swift */,
+			);
+			path = ContactTableViewCell;
+			sourceTree = "<group>";
+		};
+		B5B9C895268C9B5D00D5E28F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B5649D252686024F00F36952 /* Peoples.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

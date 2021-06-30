@@ -9,9 +9,10 @@ import UIKit
 import GoogleSignIn
 import Alamofire
 
-class ContactViewController: UITableViewController {
+class ContactViewController: UIViewController  {
     
     var peoples: [People] = []
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class ContactViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = logoutButtonItem
         let contactCell = UINib(nibName: "ContactTableViewCell", bundle: nil)
         self.tableView.register(contactCell, forCellReuseIdentifier: "contactCell")
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     func getContacts() {
@@ -55,14 +58,16 @@ class ContactViewController: UITableViewController {
         appDelegate.window?.rootViewController = RegisterLoginViewController()
     }
 
-    
+}
+
+
+extension ContactViewController: UITableViewDataSource{
     // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return peoples.count
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactTableViewCell
         cell.fullNameLabel.text = peoples[indexPath.row].names[0].displayName
         cell.phoneNumberLabel.text =  peoples[indexPath.row].phoneNumbers?[0] != nil
@@ -83,7 +88,11 @@ class ContactViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+}
+
+extension ContactViewController: UITableViewDelegate {
+    //MARK: -Table view delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! ContactTableViewCell
         
         let contactInfoViewController = ContactInfoViewController()
@@ -94,5 +103,5 @@ class ContactViewController: UITableViewController {
         
         self.navigationController?.pushViewController(contactInfoViewController, animated: true)
     }
-
+    
 }

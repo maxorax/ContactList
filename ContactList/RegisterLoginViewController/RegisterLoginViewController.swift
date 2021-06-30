@@ -7,13 +7,9 @@
 
 import UIKit
 import GoogleSignIn
-import GoogleAPIClientForREST
 
 class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
     
-    private let scopes = [kGTLRAuthScopePeopleServiceContactsReadonly]
-    private let service = GTLRPeopleServiceService()
-    private var accessToken: String?
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     override func viewDidLoad() {

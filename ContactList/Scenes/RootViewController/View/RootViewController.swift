@@ -17,18 +17,11 @@ class RootViewController: UIViewController, GIDSignInDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        GIDSignIn.sharedInstance().clientID = "276109197611-ue1ounudsot2j7efbrvi56s7l23hncon.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = Constants.clientIDAPI
         GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance()?.scopes = [
-                "https://www.google.com/m8/feeds",
-                "https://www.googleapis.com/auth/user.phonenumbers.read",
-                "https://www.googleapis.com/auth/user.organization.read",
-                "https://www.googleapis.com/auth/userinfo.profile",
-                "https://www.googleapis.com/auth/userinfo.email",
-                "https://www.googleapis.com/auth/directory.readonly"]
+        GIDSignIn.sharedInstance()?.scopes = Constants.scopesAPI
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
-
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,

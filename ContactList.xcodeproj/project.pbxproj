@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5029C21268DABEC0073E9A8 /* Constants.swift */; };
 		B54D50242685B0790069884F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D50222685B0790069884F /* RootViewController.swift */; };
 		B54D50252685B0790069884F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54D50232685B0790069884F /* RootViewController.xib */; };
 		B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */; };
@@ -19,6 +20,11 @@
 		B570C1AA2682009200F020A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B570C1A92682009200F020A8 /* Assets.xcassets */; };
 		B570C1BC2682012B00F020A8 /* RegisterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */; };
 		B570C1BD2682012B00F020A8 /* RegisterLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */; };
+		B57CC105268DADFD00B25C55 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC104268DADFD00B25C55 /* Name.swift */; };
+		B57CC108268DAE0C00B25C55 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC107268DAE0C00B25C55 /* Photo.swift */; };
+		B57CC10B268DAE2500B25C55 /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC10A268DAE2500B25C55 /* EmailAddress.swift */; };
+		B57CC10E268DAE6100B25C55 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC10D268DAE6100B25C55 /* People.swift */; };
+		B57CC111268DAE8D00B25C55 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */; };
 		B5B58C9526848A6D00652581 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5B58C9426848A6D00652581 /* GoogleService-Info.plist */; };
 		B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B58C9826849B5E00652581 /* ContactViewController.swift */; };
 		BC4EE1BE75B9FD2E2AAB6850 /* Pods_ContactList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B18BF7118AE9157EF423D /* Pods_ContactList.framework */; };
@@ -26,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		01A12B75B7147CE72FCEE2EF /* Pods-ContactList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactList.debug.xcconfig"; path = "Target Support Files/Pods-ContactList/Pods-ContactList.debug.xcconfig"; sourceTree = "<group>"; };
+		B5029C21268DABEC0073E9A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B54D50222685B0790069884F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B54D50232685B0790069884F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
@@ -40,6 +47,11 @@
 		B570C1AE2682009200F020A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLoginViewController.swift; sourceTree = "<group>"; };
 		B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterLoginViewController.xib; sourceTree = "<group>"; };
+		B57CC104268DADFD00B25C55 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		B57CC107268DAE0C00B25C55 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B57CC10A268DAE2500B25C55 /* EmailAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
+		B57CC10D268DAE6100B25C55 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		B5B58C9426848A6D00652581 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5B58C9826849B5E00652581 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		CC8B18BF7118AE9157EF423D /* Pods_ContactList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +87,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B5029C1E268DA6980073E9A8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B5B9C890268C9B1F00D5E28F /* ContactViewController */,
+				B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */,
+				B5B9C88E268C9AD700D5E28F /* RegisterLoginViewController */,
+				B5B9C88D268C9AC600D5E28F /* RootViewController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B5029C1F268DA6EF0073E9A8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B5029C20268DA6F80073E9A8 /* Constants */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B5029C20268DA6F80073E9A8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B5029C21268DABEC0073E9A8 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		B570C1942682008D00F020A8 = {
 			isa = PBXGroup;
 			children = (
@@ -96,25 +135,88 @@
 		B570C19F2682008D00F020A8 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				B5B9C892268C9B3600D5E28F /* ContactTableViewCell */,
-				B5B9C890268C9B1F00D5E28F /* ContactViewController */,
-				B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */,
-				B5B9C88E268C9AD700D5E28F /* RegisterLoginViewController */,
-				B5B9C88D268C9AC600D5E28F /* RootViewController */,
-				B570C1A02682008D00F020A8 /* AppDelegate.swift */,
-				B570C1A92682009200F020A8 /* Assets.xcassets */,
-				B570C1AE2682009200F020A8 /* Info.plist */,
-				B5B58C9426848A6D00652581 /* GoogleService-Info.plist */,
-				B5B9C895268C9B5D00D5E28F /* Entity */,
+				B5029C1F268DA6EF0073E9A8 /* Shared */,
+				B5029C1E268DA6980073E9A8 /* Scenes */,
+				B57CC102268DADBD00B25C55 /* Application */,
+				B57CC101268DAD7600B25C55 /* Resourses */,
+				B57CC103268DADEA00B25C55 /* Configurations */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		B57CC101268DAD7600B25C55 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				B570C1A92682009200F020A8 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		B57CC102268DADBD00B25C55 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B570C1A02682008D00F020A8 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B57CC103268DADEA00B25C55 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B570C1AE2682009200F020A8 /* Info.plist */,
+				B5B58C9426848A6D00652581 /* GoogleService-Info.plist */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
+		B57CC114268DB44900B25C55 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B5B9C892268C9B3600D5E28F /* ContactTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B57CC115268DB4D200B25C55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */,
+				B5B58C9826849B5E00652581 /* ContactViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B57CC116268DB4E100B25C55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */,
+				B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B57CC117268DB4E800B25C55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */,
+				B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B57CC118268DB4EE00B25C55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B54D50232685B0790069884F /* RootViewController.xib */,
+				B54D50222685B0790069884F /* RootViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5B9C88D268C9AC600D5E28F /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B54D50232685B0790069884F /* RootViewController.xib */,
-				B54D50222685B0790069884F /* RootViewController.swift */,
+				B57CC118268DB4EE00B25C55 /* View */,
 			);
 			path = RootViewController;
 			sourceTree = "<group>";
@@ -122,8 +224,7 @@
 		B5B9C88E268C9AD700D5E28F /* RegisterLoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */,
-				B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */,
+				B57CC117268DB4E800B25C55 /* View */,
 			);
 			path = RegisterLoginViewController;
 			sourceTree = "<group>";
@@ -131,8 +232,7 @@
 		B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */,
-				B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */,
+				B57CC116268DB4E100B25C55 /* View */,
 			);
 			path = ContactInfoViewController;
 			sourceTree = "<group>";
@@ -140,8 +240,9 @@
 		B5B9C890268C9B1F00D5E28F /* ContactViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */,
-				B5B58C9826849B5E00652581 /* ContactViewController.swift */,
+				B57CC114268DB44900B25C55 /* Cells */,
+				B5B9C895268C9B5D00D5E28F /* Models */,
+				B57CC115268DB4D200B25C55 /* View */,
 			);
 			path = ContactViewController;
 			sourceTree = "<group>";
@@ -155,12 +256,17 @@
 			path = ContactTableViewCell;
 			sourceTree = "<group>";
 		};
-		B5B9C895268C9B5D00D5E28F /* Entity */ = {
+		B5B9C895268C9B5D00D5E28F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B5649D252686024F00F36952 /* Peoples.swift */,
+				B57CC10D268DAE6100B25C55 /* People.swift */,
+				B57CC104268DADFD00B25C55 /* Name.swift */,
+				B57CC107268DAE0C00B25C55 /* Photo.swift */,
+				B57CC10A268DAE2500B25C55 /* EmailAddress.swift */,
+				B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */,
 			);
-			path = Entity;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,11 +407,17 @@
 			files = (
 				B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */,
 				B55131D42685ED0A0043FAA2 /* ContactTableViewCell.swift in Sources */,
+				B57CC10B268DAE2500B25C55 /* EmailAddress.swift in Sources */,
 				B5649D262686024F00F36952 /* Peoples.swift in Sources */,
+				B57CC10E268DAE6100B25C55 /* People.swift in Sources */,
 				B570C1BC2682012B00F020A8 /* RegisterLoginViewController.swift in Sources */,
+				B57CC108268DAE0C00B25C55 /* Photo.swift in Sources */,
 				B54D50242685B0790069884F /* RootViewController.swift in Sources */,
 				B570C1A12682008D00F020A8 /* AppDelegate.swift in Sources */,
+				B57CC105268DADFD00B25C55 /* Name.swift in Sources */,
+				B57CC111268DAE8D00B25C55 /* PhoneNumber.swift in Sources */,
 				B55131D92685F3930043FAA2 /* ContactInfoViewController.swift in Sources */,
+				B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

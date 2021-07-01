@@ -8,20 +8,27 @@
 import UIKit
 import GoogleSignIn
 
-class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
-    
+class RegisterLoginViewController: UIViewController{
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         GIDSignIn.sharedInstance()?.delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
+}
+
+//MARK: -GID SignIn Delegate
+
+extension RegisterLoginViewController: GIDSignInDelegate {
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
         if let error = error {
-            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+            if (error as NSError)
+                .code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
                 print("The user has not signed in before or they have since signed out.")
             } else {
                 print("\(error.localizedDescription)")
@@ -29,12 +36,16 @@ class RegisterLoginViewController: UIViewController, GIDSignInDelegate{
             return
         }
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
+        guard
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        else { return }
+        
         let navController = UINavigationController()
         appDelegate.window?.rootViewController = navController
-        navController.pushViewController(ContactViewController(), animated: false)
+        navController.pushViewController(
+            ContactViewController(),
+            animated: false
+        )
         
     }
     

@@ -181,6 +181,23 @@
 			path = ContactList;
 			sourceTree = "<group>";
 		};
+		B57751842695B44C009E0727 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B5A59B282693330F00C25076 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		B57751862695B469009E0727 /* GIDSignInManager */ = {
+			isa = PBXGroup;
+			children = (
+				B5A59B2C2693332800C25076 /* GIDSignInManager.swift */,
+				B5A59B2F269490A400C25076 /* GIDSignInManagerDelegate.swift */,
+			);
+			path = GIDSignInManager;
+			sourceTree = "<group>";
+		};
 		B57CC101268DAD7600B25C55 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,9 +270,8 @@
 		B5A59B27269332EE00C25076 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				B5A59B282693330F00C25076 /* NetworkManager.swift */,
-				B5A59B2C2693332800C25076 /* GIDSignInManager.swift */,
-				B5A59B2F269490A400C25076 /* GIDSignInManagerDelegate.swift */,
+				B57751842695B44C009E0727 /* NetworkManager */,
+				B57751862695B469009E0727 /* GIDSignInManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";

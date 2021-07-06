@@ -6,12 +6,10 @@
 //
 
 import UIKit
-import GoogleSignIn
-import Alamofire
+
 
 class ContactViewController: UIViewController {
     
-    var peoples: [People] = []
     var contactDataCellArray: [ContactDataCell] = []
     var viewModel: ContactViewModelProtocol! = ContactViewModel()
     @IBOutlet weak var indicator: UIActivityIndicatorView!

@@ -10,8 +10,6 @@ import GoogleSignIn
 
 class GIDSignInManager: NSObject, GIDSignInDelegate {
     
-    var isSignIn = false
-    
     static let shared = GIDSignInManager()
     
     public weak var delegate: GIDSignInManagerDelegate?     
@@ -58,7 +56,6 @@ class GIDSignInManager: NSObject, GIDSignInDelegate {
     }
     
     func signOut() {
-        isSignIn = false
         GIDSignIn.sharedInstance()?.signOut()
     }
     

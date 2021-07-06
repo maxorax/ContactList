@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 
 struct ContactViewModel: ContactViewModelProtocol {
@@ -30,45 +29,29 @@ struct ContactViewModel: ContactViewModelProtocol {
         guard
             let accessToken = gIDSignInManager.getAccessToken()
         else { return }
-
-        let urlString = Constants.urlAPI + accessToken
-        AF.request(urlString, method: .get).responseJSON{ (response) in
-            guard let data = response.data else {return}
-            
-            do{
-                let peoples = try JSONDecoder().decode(Peoples.self, from: data)
-                for index in 0..<peoples.people.count{
-
-                    contactDataCellArray.value.append(ContactDataCell(
-                                                        name: "",
-                                                        photoData: nil,
-                                                        email: "",
-                                                        phoneNumber: ""
-                    ))
-
-                    self.contactDataCellArray.value[index].name =
-                        peoples.people[index].names[0].displayName
-
-                    self.contactDataCellArray.value[index].email =
-                      peoples.people[index].emailAddresses[0].value
-                    self.contactDataCellArray.value[index].phoneNumber =
-                        peoples.people[index].phoneNumbers?[0].value ??
-                        "No number"
-                    if let photoUrl = peoples.people[index].photos?[0].url {
-                        AF.request(photoUrl, method: .get).response{
-                            response in
-                            guard let data = response.data else { return }
-                                
-                            self.contactDataCellArray.value[index].photoData = data
-                        }
+        
+        networkManager.getContacs(accessToken: accessToken) { (peoples) in
+            for index in 0..<peoples.count {
+                contactDataCellArray.value.append(ContactDataCell(
+                                                    name: "",
+                                                    photoData: nil,
+                                                    email: "",
+                                                    phoneNumber: ""
+                ))
+                self.contactDataCellArray.value[index].name =
+                    peoples[index].names[0].displayName
+                self.contactDataCellArray.value[index].email =
+                  peoples[index].emailAddresses[0].value
+                self.contactDataCellArray.value[index].phoneNumber =
+                    peoples[index].phoneNumbers?[0].value ??
+                    "No number"
+                if let photoUrl = peoples[index].photos?[0].url {
+                    networkManager.getContactPhoto(photoUrl: photoUrl) { (data) in
+                        self.contactDataCellArray.value[index].photoData = data
                     }
-
                 }
-                
-            } catch let error {
-                print(error.localizedDescription)
             }
-        }.resume()
+        }
     }
         
 }

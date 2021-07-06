@@ -12,13 +12,24 @@ import Alamofire
 class ContactViewController: UIViewController {
     
     var peoples: [People] = []
+    var contactDataCellArray: [ContactDataCell] = []
+    var viewModel: ContactViewModelProtocol! = ContactViewModel()
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getContacts()
+         
+        indicator.startAnimating()
+        viewModel.contactDataCellArray.bind {
+            [weak self] contactDataCellArray in
+            
+                self?.indicator.stopAnimating()
+                self?.contactDataCellArray = contactDataCellArray
+                self?.tableView.reloadData()
+        }
+        self.viewModel.getContacts()
         self.navigationItem.title = "Contact list"
         let logoutButtonItem =  UIBarButtonItem(
             title: "Logout",
@@ -36,38 +47,9 @@ class ContactViewController: UIViewController {
         self.tableView.delegate = self
     }
     
-    func getContacts() {
-        guard
-            let accessToken = GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken
-        else { return }
-        
-        let urlString = Constants.urlAPI + accessToken
-        AF.request(urlString , method: .get)
-            .responseJSON { (response) in
-                guard let data = response.data else {return}
-                    
-                do{
-                    let peoples = try JSONDecoder().decode(
-                        Peoples.self,
-                        from:data
-                    )
-                    self.peoples = peoples.people
-                    guard self.peoples.count > 0 else { return }
-                    
-                    self.tableView.reloadData()
-                } catch let error {
-                    print(error.localizedDescription)
-                }
-            }
-    }
-    
     @objc func logout() {
-        guard
-            let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        else { return }
-        
-        GIDSignIn.sharedInstance().signOut()
-        appDelegate.window?.rootViewController = RegisterLoginViewController()
+        viewModel.signOut()
+        dissmisContactViewController(vc: LoginViewController())
     }
 
 }
@@ -77,7 +59,7 @@ class ContactViewController: UIViewController {
 extension ContactViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return peoples.count
+        return contactDataCellArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,30 +67,15 @@ extension ContactViewController: UITableViewDataSource{
             withIdentifier: "contactCell",
             for: indexPath
         ) as! ContactTableViewCell
-        cell.fullNameLabel.text = peoples[indexPath.row].names[0].displayName
-        cell.phoneNumberLabel.text =
-            peoples[indexPath.row].phoneNumbers?[0] != nil
-            ? peoples[indexPath.row].phoneNumbers?[0].value
-            : "No number"
-        guard
-            let photoUrl = peoples[indexPath.row].photos?[0].url
-        else {
+        cell.fullNameLabel.text = contactDataCellArray[indexPath.row].name
+        cell.phoneNumberLabel.text = contactDataCellArray[indexPath.row].phoneNumber
+        guard  let photoData = contactDataCellArray[indexPath.row].photoData else {
             cell.indicator.stopAnimating()
             return cell
         }
         
-        AF.request(photoUrl, method: .get).response{
-            response in
-            
-            guard let data = response.data else { return }
-           
-            DispatchQueue.main.async {
-                let cell = tableView.cellForRow(at: indexPath) as? ContactTableViewCell
-                cell?.photoImageView.image = UIImage(data: data)
-                cell?.indicator.stopAnimating()
-            }
-    
-        }
+        cell.photoImageView.image = UIImage(data: photoData)
+        cell.indicator.stopAnimating()
         return cell
     }
     
@@ -118,15 +85,37 @@ extension ContactViewController: UITableViewDataSource{
 
 extension ContactViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! ContactTableViewCell
         
         let contactInfoViewController = ContactInfoViewController()
-        contactInfoViewController.email = "Email: \(peoples[indexPath.row].emailAddresses[0].value)"
-        contactInfoViewController.phoneNumber = "Phone number: \(cell.phoneNumberLabel.text ?? "no number")"
-        contactInfoViewController.photo = cell.photoImageView
-        contactInfoViewController.name = "Full name: \(cell.fullNameLabel.text ?? "")"
+        contactInfoViewController.name = contactDataCellArray[indexPath.row].name
+        contactInfoViewController.email = contactDataCellArray[indexPath.row].email
+        contactInfoViewController.phoneNumber = contactDataCellArray[indexPath.row].phoneNumber
+        guard let photoData = contactDataCellArray[indexPath.row].photoData else {
+            pushViewController(vc: contactInfoViewController)
+            return
+        }
         
-        self.navigationController?.pushViewController(contactInfoViewController, animated: true)
+        contactInfoViewController.photoData = photoData
+            
+        pushViewController(vc: contactInfoViewController)
+        
+    }
+    
+}
+
+//MARK: -Routing
+
+extension ContactViewController {
+    
+    func pushViewController(vc: UIViewController){
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func dissmisContactViewController(vc: UIViewController){
+        guard
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        else { return }
+        appDelegate.window?.rootViewController = vc
     }
     
 }

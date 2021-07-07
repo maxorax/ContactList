@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  ContactList
-//
-//  Created by Maxorax on 06.07.2021.
-//
-
 import Foundation
 
 class RootViewModel: RootViewModelProtocol {
@@ -22,7 +15,7 @@ class RootViewModel: RootViewModelProtocol {
         self.signInIsSuccess.value = isSuccess
     }
     
-    func restore(){
+    func restore() {
         gIDSignInManager.restore()
     }
 }

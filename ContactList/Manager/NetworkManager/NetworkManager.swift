@@ -1,20 +1,13 @@
-//
-//  NetworkManager.swift
-//  ContactList
-//
-//  Created by Maxorax on 05.07.2021.
-//
-
 import Foundation
 import Alamofire
 
 class NetworkManager {
     
-    func getContacs(accessToken: String, _ complitionHandler: @escaping ([People]) -> Void )  {
+    func getContacs(accessToken: String, _ complitionHandler: @escaping ([People]) -> Void ) {
         
         let urlString = Constants.urlAPI + accessToken
         AF.request(urlString, method: .get).responseJSON{ (response) in
-            guard let data = response.data else {return}
+            guard let data = response.data else { return }
             
             do{
               let peoples = try JSONDecoder().decode(Peoples.self, from: data)

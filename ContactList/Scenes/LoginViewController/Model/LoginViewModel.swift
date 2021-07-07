@@ -1,10 +1,3 @@
-//
-//  LoginViewModel.swift
-//  ContactList
-//
-//  Created by Maxorax on 05.07.2021.
-//
-
 import Foundation
 import UIKit.UIViewController
 
@@ -18,11 +11,11 @@ class LoginViewModel: LoginViewModelProtocol {
         gIDSignInManager.delegate = self
     }
     
-    func presentingViewController(vc: UIViewController){
+    func presentingViewController(vc: UIViewController) {
         gIDSignInManager.presentingViewController(vc: vc)
     }
     
-    func signIn(isSuccess: Bool){
+    func signIn(isSuccess: Bool) {
         self.signInIsSuccess.value = isSuccess
     }
     

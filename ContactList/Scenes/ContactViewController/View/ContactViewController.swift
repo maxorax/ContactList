@@ -1,12 +1,4 @@
-//
-//  ContactViewController.swift
-//  ContactList
-//
-//  Created by Maxorax on 24.06.2021.
-//
-
 import UIKit
-
 
 class ContactViewController: UIViewController {
     
@@ -54,7 +46,7 @@ class ContactViewController: UIViewController {
 
 // MARK: - Table view data source
 
-extension ContactViewController: UITableViewDataSource{
+extension ContactViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contactDataCellArray.count
@@ -105,11 +97,11 @@ extension ContactViewController: UITableViewDelegate {
 
 extension ContactViewController {
     
-    func pushViewController(vc: UIViewController){
+    func pushViewController(vc: UIViewController) {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func dissmisContactViewController(vc: UIViewController){
+    func dissmisContactViewController(vc: UIViewController) {
         guard
             let appDelegate = UIApplication.shared.delegate as? AppDelegate
         else { return }

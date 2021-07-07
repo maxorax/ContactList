@@ -1,15 +1,9 @@
-//
-//  AppDelegate.swift
-//  ContactList
-//
-//  Created by Maxorax on 22.06.2021.
-//
 
 import UIKit
 import GoogleSignIn
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 

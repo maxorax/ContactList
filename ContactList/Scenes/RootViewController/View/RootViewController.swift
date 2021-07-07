@@ -1,10 +1,3 @@
-//
-//  RootViewController.swift
-//  ContactList
-//
-//  Created by Maxorax on 25.06.2021.
-//
-
 import UIKit
 
 
@@ -26,13 +19,12 @@ class RootViewController: UIViewController {
         }
         rootViewModel.restore()
     }
-
 }
 
 //MARK: -Routing
 
 extension RootViewController {
-    func showContactVC(){
+    func showContactVC() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let navController = UINavigationController()
@@ -41,7 +33,7 @@ extension RootViewController {
         
     }
     
-    func showRegisterLoginVC(){
+    func showRegisterLoginVC() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         appDelegate.window?.rootViewController = LoginViewController()

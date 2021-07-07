@@ -1,10 +1,3 @@
-//
-//  ContactInfoViewController.swift
-//  ContactList
-//
-//  Created by Maxorax on 25.06.2021.
-//
-
 import UIKit
 
 class ContactInfoViewController: UIViewController {
@@ -47,7 +40,7 @@ class ContactInfoViewController: UIViewController {
         nameLabel.text = "Full name: \(name)"
         phoneNumberLabel.text = "Phone number: \(phoneNumber)"
         emailLabel.text = "Email: \(email)"
-        guard let data = photoData else {return}
+        guard let data = photoData else { return }
 
         photoImageView.image = UIImage(data: data)
     }

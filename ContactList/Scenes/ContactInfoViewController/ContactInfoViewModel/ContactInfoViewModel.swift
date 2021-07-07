@@ -1,10 +1,3 @@
-//
-//  ContactInfoViewModel.swift
-//  ContactList
-//
-//  Created by Maxorax on 06.07.2021.
-//
-
 import Foundation
 
 class ContactInfoViewModel: ContactInfoViewModelProtocol {
@@ -21,13 +14,11 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
         photoData = Dynamic(Data())
     }
     
-    func getContact(contact: ContactDataCell){
+    func getContact(contact: ContactDataCell) {
         self.name.value = contact.name
         self.email.value = contact.email
         self.phoneNumber.value = contact.phoneNumber
-        guard let photoData = contact.photoData else {
-            return
-        }
+        guard let photoData = contact.photoData else { return }
         
         self.photoData.value = photoData
     }

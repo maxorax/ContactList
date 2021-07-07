@@ -1,10 +1,3 @@
-//
-//  GIDSignInManager.swift
-//  ContactList
-//
-//  Created by Maxorax on 05.07.2021.
-//
-
 import Foundation
 import GoogleSignIn
 
@@ -22,7 +15,7 @@ class GIDSignInManager: NSObject, GIDSignInDelegate {
         GIDSignIn.sharedInstance()?.scopes = Constants.scopesAPI
     }
     
-    func restore()  {
+    func restore() {
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     }
     
@@ -38,16 +31,14 @@ class GIDSignInManager: NSObject, GIDSignInDelegate {
             }
             return
         }
-        
         delegate?.signIn(isSuccess: true)
-        
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
     }
     
-    func getAccessToken() -> String?{
+    func getAccessToken() -> String? {
         return GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken
     }
     

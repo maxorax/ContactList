@@ -1,10 +1,3 @@
-//
-//  ContactTableViewCell.swift
-//  ContactList
-//
-//  Created by Maxorax on 25.06.2021.
-//
-
 import UIKit
 
 class ContactTableViewCell: UITableViewCell {

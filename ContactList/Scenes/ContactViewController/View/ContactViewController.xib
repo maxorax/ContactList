@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactViewController" customModule="ContactList" customModuleProvider="target">
             <connections>
+                <outlet property="indicator" destination="9ie-mD-GEp" id="eqm-e5-Yaj"/>
                 <outlet property="tableView" destination="i5M-Pr-FkT" id="sA1-M1-CGk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,9 +29,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableViewCellContentView>
                 </tableViewCell>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9ie-mD-GEp">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9ie-mD-GEp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0f2-6O-wKS"/>
+                <constraint firstItem="9ie-mD-GEp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gSK-1m-HPj"/>
+            </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="142.02898550724638" y="87.723214285714278"/>
         </view>

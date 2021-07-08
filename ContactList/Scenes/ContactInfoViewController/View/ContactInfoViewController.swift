@@ -1,10 +1,3 @@
-//
-//  ContactInfoViewController.swift
-//  ContactList
-//
-//  Created by Maxorax on 25.06.2021.
-//
-
 import UIKit
 
 class ContactInfoViewController: UIViewController {
@@ -12,7 +5,28 @@ class ContactInfoViewController: UIViewController {
     var name: String = ""
     var phoneNumber: String = ""
     var email: String = ""
-    var photo: UIImageView?
+    var photoData: Data?
+    
+    var contactInfoViewModel: ContactInfoViewModelProtocol! {
+        didSet{
+            contactInfoViewModel.name.bind{
+                [weak self] name in
+                self?.nameLabel.text = "Full name: \(name)"
+            }
+            contactInfoViewModel.phoneNumber.bind{
+                [weak self] phoneNumber in
+                self?.phoneNumberLabel.text = "Phone number: \(phoneNumber)"
+            }
+            contactInfoViewModel.email.bind{
+                [weak self] email in
+                self?.emailLabel.text = "Email: \(email)"
+            }
+            contactInfoViewModel.photoData.bind{
+                [weak self] photoData in
+                self?.photoImageView.image = UIImage(data: photoData)
+            }
+        }
+    }
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -20,14 +34,15 @@ class ContactInfoViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contactInfoViewModel = ContactInfoViewModel()
         navigationItem.title = "Information"
-        nameLabel.text = name
-        phoneNumberLabel.text = phoneNumber
-        emailLabel.text = email
-        guard let image = photo?.image else {return}
-        photoImageView.image = image
+        nameLabel.text = "Full name: \(name)"
+        phoneNumberLabel.text = "Phone number: \(phoneNumber)"
+        emailLabel.text = "Email: \(email)"
+        guard let data = photoData else { return }
 
-        // Do any additional setup after loading the view.
+        photoImageView.image = UIImage(data: data)
     }
 
 }

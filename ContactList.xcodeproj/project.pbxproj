@@ -15,16 +15,29 @@
 		B55131D52685ED0A0043FAA2 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131D32685ED0A0043FAA2 /* ContactTableViewCell.xib */; };
 		B55131D92685F3930043FAA2 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */; };
 		B55131DA2685F3930043FAA2 /* ContactInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */; };
+		B5595C4F268DCF0B00A3B4BA /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5595C4E268DCF0B00A3B4BA /* Dynamic.swift */; };
+		B5595C53268DCF7000A3B4BA /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5595C52268DCF7000A3B4BA /* ContactViewModel.swift */; };
+		B5595C57268DCFB300A3B4BA /* ContactViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5595C56268DCFB300A3B4BA /* ContactViewModelProtocol.swift */; };
+		B5595C5B268DFC9600A3B4BA /* СontactDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5595C5A268DFC9600A3B4BA /* СontactDataCell.swift */; };
 		B5649D262686024F00F36952 /* Peoples.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5649D252686024F00F36952 /* Peoples.swift */; };
 		B570C1A12682008D00F020A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1A02682008D00F020A8 /* AppDelegate.swift */; };
 		B570C1AA2682009200F020A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B570C1A92682009200F020A8 /* Assets.xcassets */; };
-		B570C1BC2682012B00F020A8 /* RegisterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */; };
-		B570C1BD2682012B00F020A8 /* RegisterLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */; };
+		B570C1BC2682012B00F020A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570C1BA2682012A00F020A8 /* LoginViewController.swift */; };
+		B570C1BD2682012B00F020A8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C1BB2682012A00F020A8 /* LoginViewController.xib */; };
 		B57CC105268DADFD00B25C55 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC104268DADFD00B25C55 /* Name.swift */; };
 		B57CC108268DAE0C00B25C55 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC107268DAE0C00B25C55 /* Photo.swift */; };
 		B57CC10B268DAE2500B25C55 /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC10A268DAE2500B25C55 /* EmailAddress.swift */; };
 		B57CC10E268DAE6100B25C55 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC10D268DAE6100B25C55 /* People.swift */; };
 		B57CC111268DAE8D00B25C55 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */; };
+		B5A59B292693330F00C25076 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B282693330F00C25076 /* NetworkManager.swift */; };
+		B5A59B2D2693332800C25076 /* GIDSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B2C2693332800C25076 /* GIDSignInManager.swift */; };
+		B5A59B30269490A400C25076 /* GIDSignInManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B2F269490A400C25076 /* GIDSignInManagerDelegate.swift */; };
+		B5A59B342694998600C25076 /* RootViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B332694998600C25076 /* RootViewModelProtocol.swift */; };
+		B5A59B37269499E500C25076 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B36269499E500C25076 /* RootViewModel.swift */; };
+		B5A59B3C2694B3A900C25076 /* ContactInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */; };
+		B5A59B3F2694B40E00C25076 /* ContactInfoViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */; };
+		B5B1EBDD2692600400722955 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B1EBDC2692600300722955 /* LoginViewModelProtocol.swift */; };
+		B5B1EBE0269260C600722955 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B1EBDF269260C600722955 /* LoginViewModel.swift */; };
 		B5B58C9526848A6D00652581 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5B58C9426848A6D00652581 /* GoogleService-Info.plist */; };
 		B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B58C9826849B5E00652581 /* ContactViewController.swift */; };
 		BC4EE1BE75B9FD2E2AAB6850 /* Pods_ContactList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B18BF7118AE9157EF423D /* Pods_ContactList.framework */; };
@@ -40,18 +53,31 @@
 		B55131D32685ED0A0043FAA2 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		B55131D72685F3930043FAA2 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 		B55131D82685F3930043FAA2 /* ContactInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoViewController.xib; sourceTree = "<group>"; };
+		B5595C4E268DCF0B00A3B4BA /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		B5595C52268DCF7000A3B4BA /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		B5595C56268DCFB300A3B4BA /* ContactViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModelProtocol.swift; sourceTree = "<group>"; };
+		B5595C5A268DFC9600A3B4BA /* СontactDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СontactDataCell.swift"; sourceTree = "<group>"; };
 		B5649D252686024F00F36952 /* Peoples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peoples.swift; sourceTree = "<group>"; };
 		B570C19D2682008D00F020A8 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B570C1A02682008D00F020A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B570C1A92682009200F020A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B570C1AE2682009200F020A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLoginViewController.swift; sourceTree = "<group>"; };
-		B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterLoginViewController.xib; sourceTree = "<group>"; };
+		B570C1BA2682012A00F020A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B570C1BB2682012A00F020A8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B57CC104268DADFD00B25C55 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		B57CC107268DAE0C00B25C55 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		B57CC10A268DAE2500B25C55 /* EmailAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
 		B57CC10D268DAE6100B25C55 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		B5A59B282693330F00C25076 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5A59B2C2693332800C25076 /* GIDSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIDSignInManager.swift; sourceTree = "<group>"; };
+		B5A59B2F269490A400C25076 /* GIDSignInManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIDSignInManagerDelegate.swift; sourceTree = "<group>"; };
+		B5A59B332694998600C25076 /* RootViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelProtocol.swift; sourceTree = "<group>"; };
+		B5A59B36269499E500C25076 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewModel.swift; sourceTree = "<group>"; };
+		B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewModelProtocol.swift; sourceTree = "<group>"; };
+		B5B1EBDC2692600300722955 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
+		B5B1EBDF269260C600722955 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B5B58C9426848A6D00652581 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5B58C9826849B5E00652581 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		CC8B18BF7118AE9157EF423D /* Pods_ContactList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +118,7 @@
 			children = (
 				B5B9C890268C9B1F00D5E28F /* ContactViewController */,
 				B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */,
-				B5B9C88E268C9AD700D5E28F /* RegisterLoginViewController */,
+				B5B9C88E268C9AD700D5E28F /* LoginViewController */,
 				B5B9C88D268C9AC600D5E28F /* RootViewController */,
 			);
 			path = Scenes;
@@ -112,6 +138,15 @@
 				B5029C21268DABEC0073E9A8 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B5595C51268DCF5800A3B4BA /* ContactViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5595C52268DCF7000A3B4BA /* ContactViewModel.swift */,
+				B5595C56268DCFB300A3B4BA /* ContactViewModelProtocol.swift */,
+			);
+			path = ContactViewModel;
 			sourceTree = "<group>";
 		};
 		B570C1942682008D00F020A8 = {
@@ -135,6 +170,8 @@
 		B570C19F2682008D00F020A8 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				B5A59B27269332EE00C25076 /* Manager */,
+				B5595C4E268DCF0B00A3B4BA /* Dynamic.swift */,
 				B5029C1F268DA6EF0073E9A8 /* Shared */,
 				B5029C1E268DA6980073E9A8 /* Scenes */,
 				B57CC102268DADBD00B25C55 /* Application */,
@@ -142,6 +179,23 @@
 				B57CC103268DADEA00B25C55 /* Configurations */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		B57751842695B44C009E0727 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B5A59B282693330F00C25076 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		B57751862695B469009E0727 /* GIDSignInManager */ = {
+			isa = PBXGroup;
+			children = (
+				B5A59B2C2693332800C25076 /* GIDSignInManager.swift */,
+				B5A59B2F269490A400C25076 /* GIDSignInManagerDelegate.swift */,
+			);
+			path = GIDSignInManager;
 			sourceTree = "<group>";
 		};
 		B57CC101268DAD7600B25C55 /* Resourses */ = {
@@ -198,8 +252,8 @@
 		B57CC117268DB4E800B25C55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B570C1BA2682012A00F020A8 /* RegisterLoginViewController.swift */,
-				B570C1BB2682012A00F020A8 /* RegisterLoginViewController.xib */,
+				B570C1BA2682012A00F020A8 /* LoginViewController.swift */,
+				B570C1BB2682012A00F020A8 /* LoginViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,25 +267,64 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B5A59B27269332EE00C25076 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B57751842695B44C009E0727 /* NetworkManager */,
+				B57751862695B469009E0727 /* GIDSignInManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B5A59B322694996700C25076 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5A59B332694998600C25076 /* RootViewModelProtocol.swift */,
+				B5A59B36269499E500C25076 /* RootViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5A59B3A2694B36500C25076 /* ContactInfoViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */,
+				B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */,
+			);
+			path = ContactInfoViewModel;
+			sourceTree = "<group>";
+		};
+		B5B1EBDA26925F2E00722955 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5B1EBDC2692600300722955 /* LoginViewModelProtocol.swift */,
+				B5B1EBDF269260C600722955 /* LoginViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B5B9C88D268C9AC600D5E28F /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B5A59B322694996700C25076 /* Model */,
 				B57CC118268DB4EE00B25C55 /* View */,
 			);
 			path = RootViewController;
 			sourceTree = "<group>";
 		};
-		B5B9C88E268C9AD700D5E28F /* RegisterLoginViewController */ = {
+		B5B9C88E268C9AD700D5E28F /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B5B1EBDA26925F2E00722955 /* Model */,
 				B57CC117268DB4E800B25C55 /* View */,
 			);
-			path = RegisterLoginViewController;
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B5A59B3A2694B36500C25076 /* ContactInfoViewModel */,
 				B57CC116268DB4E100B25C55 /* View */,
 			);
 			path = ContactInfoViewController;
@@ -240,6 +333,7 @@
 		B5B9C890268C9B1F00D5E28F /* ContactViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B5595C51268DCF5800A3B4BA /* ContactViewModel */,
 				B57CC114268DB44900B25C55 /* Cells */,
 				B5B9C895268C9B5D00D5E28F /* Models */,
 				B57CC115268DB4D200B25C55 /* View */,
@@ -265,6 +359,7 @@
 				B57CC107268DAE0C00B25C55 /* Photo.swift */,
 				B57CC10A268DAE2500B25C55 /* EmailAddress.swift */,
 				B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */,
+				B5595C5A268DFC9600A3B4BA /* СontactDataCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,7 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55131D52685ED0A0043FAA2 /* ContactTableViewCell.xib in Resources */,
-				B570C1BD2682012B00F020A8 /* RegisterLoginViewController.xib in Resources */,
+				B570C1BD2682012B00F020A8 /* LoginViewController.xib in Resources */,
 				B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */,
 				B54D50252685B0790069884F /* RootViewController.xib in Resources */,
 				B570C1AA2682009200F020A8 /* Assets.xcassets in Resources */,
@@ -406,18 +501,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */,
+				B5A59B3C2694B3A900C25076 /* ContactInfoViewModel.swift in Sources */,
 				B55131D42685ED0A0043FAA2 /* ContactTableViewCell.swift in Sources */,
+				B5595C5B268DFC9600A3B4BA /* СontactDataCell.swift in Sources */,
 				B57CC10B268DAE2500B25C55 /* EmailAddress.swift in Sources */,
+				B5595C57268DCFB300A3B4BA /* ContactViewModelProtocol.swift in Sources */,
+				B5A59B30269490A400C25076 /* GIDSignInManagerDelegate.swift in Sources */,
+				B5595C4F268DCF0B00A3B4BA /* Dynamic.swift in Sources */,
+				B5A59B342694998600C25076 /* RootViewModelProtocol.swift in Sources */,
+				B5B1EBDD2692600400722955 /* LoginViewModelProtocol.swift in Sources */,
 				B5649D262686024F00F36952 /* Peoples.swift in Sources */,
 				B57CC10E268DAE6100B25C55 /* People.swift in Sources */,
-				B570C1BC2682012B00F020A8 /* RegisterLoginViewController.swift in Sources */,
+				B570C1BC2682012B00F020A8 /* LoginViewController.swift in Sources */,
 				B57CC108268DAE0C00B25C55 /* Photo.swift in Sources */,
+				B5A59B37269499E500C25076 /* RootViewModel.swift in Sources */,
 				B54D50242685B0790069884F /* RootViewController.swift in Sources */,
+				B5A59B292693330F00C25076 /* NetworkManager.swift in Sources */,
+				B5A59B2D2693332800C25076 /* GIDSignInManager.swift in Sources */,
 				B570C1A12682008D00F020A8 /* AppDelegate.swift in Sources */,
+				B5595C53268DCF7000A3B4BA /* ContactViewModel.swift in Sources */,
 				B57CC105268DADFD00B25C55 /* Name.swift in Sources */,
 				B57CC111268DAE8D00B25C55 /* PhoneNumber.swift in Sources */,
 				B55131D92685F3930043FAA2 /* ContactInfoViewController.swift in Sources */,
+				B5B1EBE0269260C600722955 /* LoginViewModel.swift in Sources */,
 				B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */,
+				B5A59B3F2694B40E00C25076 /* ContactInfoViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

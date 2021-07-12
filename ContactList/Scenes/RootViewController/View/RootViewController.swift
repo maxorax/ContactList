@@ -1,14 +1,22 @@
 import UIKit
 
-
 class RootViewController: UIViewController {
     
-    var rootViewModel: RootViewModelProtocol! = RootViewModel()
+    var rootViewModel: RootViewModelProtocol!
+    
+    init(_ viewModel: RootViewModel) {
+        rootViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rootViewModel.signInIsSuccess.bind{
+        rootViewModel.isSignInSuccess.bind{
             [weak self] signInSuccess in
             guard signInSuccess else {
                 self?.showRegisterLoginVC()
@@ -17,6 +25,7 @@ class RootViewController: UIViewController {
             
             self?.showContactVC()
         }
+
         rootViewModel.restore()
     }
 }
@@ -25,17 +34,10 @@ class RootViewController: UIViewController {
 
 extension RootViewController {
     func showContactVC() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        let navController = UINavigationController()
-        appDelegate.window?.rootViewController = navController
-        navController.pushViewController(ContactViewController(), animated: false)
-        
+        rootViewModel.openConctactController()
     }
     
     func showRegisterLoginVC() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        appDelegate.window?.rootViewController = LoginViewController()
+        rootViewModel.openLoginController()
     }
 }

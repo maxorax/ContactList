@@ -5,8 +5,10 @@ class LoginViewModel: LoginViewModelProtocol {
     
     var signInIsSuccess: Dynamic<Bool>!
     var gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
+    private let router: LoginRouter.Routes
     
-    init() {
+    init(container: Container) {
+        self.router = container.router
         self.signInIsSuccess = Dynamic(false)
         gIDSignInManager.delegate = self
     }
@@ -19,4 +21,14 @@ class LoginViewModel: LoginViewModelProtocol {
         self.signInIsSuccess.value = isSuccess
     }
     
+    func openContactViewController(){
+        router.openContactModule()
+    }
+    
+}
+
+extension LoginViewModel {
+    struct Container{
+        var router: LoginRouter
+    }
 }

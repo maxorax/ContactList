@@ -7,11 +7,16 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
     var email: Dynamic<String>!
     var photoData: Dynamic<Data>!
     
-    init() {
+    private let router: ContactInfoRouter.Routes
+    
+    init(container: Container) {
+        self.router = container.router
         name = Dynamic("")
         phoneNumber = Dynamic("")
         email = Dynamic("")
         photoData = Dynamic(Data())
+        
+        
     }
     
     func getContact(contact: ContactDataCell) {
@@ -24,3 +29,16 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
     }
     
 }
+
+extension ContactInfoViewModel {
+    struct Container {
+        let router: ContactInfoRouter
+        let contactDataCell: ContactDataCell
+    }
+}
+
+//extension ContactInfoViewModel {
+//    struct Container {
+//        var router: ContactInfoRouter
+//    }
+//}

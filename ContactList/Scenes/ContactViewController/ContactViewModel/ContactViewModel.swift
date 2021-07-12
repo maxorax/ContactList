@@ -4,10 +4,12 @@ struct ContactViewModel: ContactViewModelProtocol {
     
     var contactDataCellArray: Dynamic<[ContactDataCell]>!
     
-    let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
-    let networkManager: NetworkManager = NetworkManager()
+    private let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
+    private let networkManager: NetworkManager = NetworkManager()
+    private let router: ContactRouter.Routes
     
-    init() {
+    init(container: Container) {
+        self.router = container.router
         self.contactDataCellArray = Dynamic([])
         getContacts()
     }
@@ -24,12 +26,7 @@ struct ContactViewModel: ContactViewModelProtocol {
         
         networkManager.getContacs(accessToken: accessToken) { (peoples) in
             for index in 0..<peoples.count {
-                contactDataCellArray.value.append(ContactDataCell(
-                                                    name: "",
-                                                    photoData: nil,
-                                                    email: "",
-                                                    phoneNumber: ""
-                ))
+                contactDataCellArray.value.append(ContactDataCell())
                 self.contactDataCellArray.value[index].name =
                     peoples[index].names[0].displayName
                 self.contactDataCellArray.value[index].email =
@@ -44,5 +41,19 @@ struct ContactViewModel: ContactViewModelProtocol {
                 }
             }
         }
+    }
+    
+    func openSelectedCells(contactDataCell: ContactDataCell){
+        router.openContactInfoModule(contactDataCell: contactDataCell)
+    }
+   
+    func openLoginController(){
+        router.openLoginModule()
+    }
+}
+
+extension ContactViewModel {
+    struct Container {
+        var router: ContactRouter
     }
 }

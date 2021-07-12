@@ -6,4 +6,8 @@ protocol ContactViewModelProtocol {
     func getContacts()
     
     func signOut()
+    
+    func openSelectedCells(contactDataCell: ContactDataCell)
+    
+    func openLoginController()
 }

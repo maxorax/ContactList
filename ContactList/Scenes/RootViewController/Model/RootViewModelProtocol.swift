@@ -2,7 +2,11 @@ import Foundation
 
 protocol RootViewModelProtocol: GIDSignInManagerDelegate {
     
-    var signInIsSuccess: Dynamic<Bool>! { get }
+    var isSignInSuccess: Dynamic<Bool>! { get }
     
     func restore()
+    
+    func openConctactController()
+    
+    func openLoginController()
 }

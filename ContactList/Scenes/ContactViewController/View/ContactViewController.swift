@@ -1,12 +1,25 @@
 import UIKit
 
-class ContactViewController: UIViewController {
+final class ContactViewController: UIViewController {
     
     var contactDataCellArray: [ContactDataCell] = []
-    var viewModel: ContactViewModelProtocol! = ContactViewModel()
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    var viewModel: ContactViewModelProtocol! {
+        didSet{
+            
+        }
+    }
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
+    
+    init(_ viewModel: ContactViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +27,6 @@ class ContactViewController: UIViewController {
         indicator.startAnimating()
         viewModel.contactDataCellArray.bind {
             [weak self] contactDataCellArray in
-            
                 self?.indicator.stopAnimating()
                 self?.contactDataCellArray = contactDataCellArray
                 self?.tableView.reloadData()
@@ -39,7 +51,7 @@ class ContactViewController: UIViewController {
     
     @objc func logout() {
         viewModel.signOut()
-        dissmisContactViewController(vc: LoginViewController())
+        viewModel.openLoginController()
     }
 
 }
@@ -75,37 +87,9 @@ extension ContactViewController: UITableViewDataSource {
 
 extension ContactViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let contactInfoViewController = ContactInfoViewController()
-        contactInfoViewController.name = contactDataCellArray[indexPath.row].name
-        contactInfoViewController.email = contactDataCellArray[indexPath.row].email
-        contactInfoViewController.phoneNumber = contactDataCellArray[indexPath.row].phoneNumber
-        guard let photoData = contactDataCellArray[indexPath.row].photoData else {
-            pushViewController(vc: contactInfoViewController)
-            return
-        }
-        
-        contactInfoViewController.photoData = photoData
-            
-        pushViewController(vc: contactInfoViewController)
-        
+        viewModel.openSelectedCells(contactDataCell: contactDataCellArray[indexPath.row])
     }
     
 }
 
-//MARK: -Routing
 
-extension ContactViewController {
-    
-    func pushViewController(vc: UIViewController) {
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func dissmisContactViewController(vc: UIViewController) {
-        guard
-            let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        else { return }
-        appDelegate.window?.rootViewController = vc
-    }
-    
-}

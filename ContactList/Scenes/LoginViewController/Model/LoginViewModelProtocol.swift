@@ -6,6 +6,8 @@ protocol LoginViewModelProtocol: GIDSignInManagerDelegate {
     var signInIsSuccess: Dynamic<Bool>! { get }
     
     func presentingViewController(vc: UIViewController)
+    
+    func openContactViewController()
 
 }
 

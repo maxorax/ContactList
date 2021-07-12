@@ -2,16 +2,7 @@ import UIKit
 
 class ContactInfoViewController: UIViewController {
     
-    var name: String = ""
-    var phoneNumber: String = ""
-    var email: String = ""
-    var photoData: Data?
-    
-    var contactInfoViewModel: ContactInfoViewModelProtocol! {
-        didSet{
-            
-        }
-    }
+    var contactInfoViewModel: ContactInfoViewModelProtocol!
     
     init(_ viewModel: ContactInfoViewModel) {
         self.contactInfoViewModel = viewModel
@@ -29,6 +20,7 @@ class ContactInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         contactInfoViewModel.name.bind{
             [weak self] name in
             self?.nameLabel.text = "Full name: \(name)"
@@ -45,13 +37,9 @@ class ContactInfoViewController: UIViewController {
             [weak self] photoData in
             self?.photoImageView.image = UIImage(data: photoData)
         }
+        
         navigationItem.title = "Information"
-        nameLabel.text = "Full name: \(name)"
-        phoneNumberLabel.text = "Phone number: \(phoneNumber)"
-        emailLabel.text = "Email: \(email)"
-        guard let data = photoData else { return }
-
-        photoImageView.image = UIImage(data: data)
+        contactInfoViewModel.getContact()
     }
 
 }

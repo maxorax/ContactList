@@ -39,12 +39,10 @@ class GIDSignInManager: NSObject, GIDSignInDelegate {
     }
     
     func getAccessToken() -> String? {
-        guard let currentUser = GIDSignIn.sharedInstance()?.currentUser else { return nil }
         guard
-            let accesToken = currentUser.authentication.accessToken
-        else {
-            return nil
-        }
+            let accesToken = GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken
+        else { return nil }
+        
         return accesToken
     }
     

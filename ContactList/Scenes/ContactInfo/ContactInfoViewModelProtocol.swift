@@ -5,6 +5,7 @@ protocol ContactInfoViewModelProtocol {
     var phoneNumber: Dynamic<String>! { get }
     var email: Dynamic<String>! { get }
     var photoData: Dynamic<Data>! { get }
+    var contactDataCell: ContactDataCell { get }
     
-    func getContact(contact: ContactDataCell)
+    func getContact()
 }

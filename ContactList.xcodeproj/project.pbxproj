@@ -154,10 +154,10 @@
 		B5029C1E268DA6980073E9A8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B5B9C890268C9B1F00D5E28F /* ContactViewController */,
-				B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */,
-				B5B9C88E268C9AD700D5E28F /* LoginViewController */,
-				B5B9C88D268C9AC600D5E28F /* RootViewController */,
+				B5B9C890268C9B1F00D5E28F /* Contact */,
+				B5B9C88F268C9AF200D5E28F /* ContactInfo */,
+				B5B9C88E268C9AD700D5E28F /* Login */,
+				B5B9C88D268C9AC600D5E28F /* Root */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -178,13 +178,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		B5595C51268DCF5800A3B4BA /* ContactViewModel */ = {
+		B5595C51268DCF5800A3B4BA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B5595C52268DCF7000A3B4BA /* ContactViewModel.swift */,
 				B5595C56268DCFB300A3B4BA /* ContactViewModelProtocol.swift */,
 			);
-			path = ContactViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B570C1942682008D00F020A8 = {
@@ -348,78 +348,78 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		B5A59B322694996700C25076 /* Model */ = {
+		B5A59B322694996700C25076 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B5A59B332694998600C25076 /* RootViewModelProtocol.swift */,
 				B5A59B36269499E500C25076 /* RootViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B5A59B3A2694B36500C25076 /* ContactInfoViewModel */ = {
+		B5A59B3A2694B36500C25076 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */,
-				B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */,
+				B589E20B269703E5003B3B79 /* ContactInfoModule.swift */,
+				B589E22526970A45003B3B79 /* ContactInfoRouter.swift */,
 			);
-			path = ContactInfoViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B5B1EBDA26925F2E00722955 /* Model */ = {
+		B5B1EBDA26925F2E00722955 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B5B1EBDC2692600300722955 /* LoginViewModelProtocol.swift */,
 				B5B1EBDF269260C600722955 /* LoginViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B5B9C88D268C9AC600D5E28F /* RootViewController */ = {
+		B5B9C88D268C9AC600D5E28F /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				B5A59B322694996700C25076 /* Model */,
+				B5A59B322694996700C25076 /* ViewModel */,
 				B57CC118268DB4EE00B25C55 /* View */,
 				B503E86226979BCF00F47E4D /* RootRouter.swift */,
 				B503E86526979BE500F47E4D /* RootModule.swift */,
 				B503E86E26979FED00F47E4D /* RootModuleBuilder.swift */,
 			);
-			path = RootViewController;
+			path = Root;
 			sourceTree = "<group>";
 		};
-		B5B9C88E268C9AD700D5E28F /* LoginViewController */ = {
+		B5B9C88E268C9AD700D5E28F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B5B1EBDA26925F2E00722955 /* Model */,
+				B5B1EBDA26925F2E00722955 /* ViewModel */,
 				B57CC117268DB4E800B25C55 /* View */,
 				B503E8712697AAF100F47E4D /* LoginModule.swift */,
 				B503E8742697AB0600F47E4D /* LoginRouter.swift */,
 			);
-			path = LoginViewController;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */ = {
+		B5B9C88F268C9AF200D5E28F /* ContactInfo */ = {
 			isa = PBXGroup;
 			children = (
-				B589E20B269703E5003B3B79 /* ContactInfoModule.swift */,
-				B589E22526970A45003B3B79 /* ContactInfoRouter.swift */,
-				B5A59B3A2694B36500C25076 /* ContactInfoViewModel */,
+				B5A59B3A2694B36500C25076 /* ViewModel */,
 				B57CC116268DB4E100B25C55 /* View */,
+				B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */,
+				B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */,
 			);
-			path = ContactInfoViewController;
+			path = ContactInfo;
 			sourceTree = "<group>";
 		};
-		B5B9C890268C9B1F00D5E28F /* ContactViewController */ = {
+		B5B9C890268C9B1F00D5E28F /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				B5595C51268DCF5800A3B4BA /* ContactViewModel */,
+				B5595C51268DCF5800A3B4BA /* ViewModel */,
 				B57CC114268DB44900B25C55 /* Cells */,
 				B5B9C895268C9B5D00D5E28F /* Models */,
 				B57CC115268DB4D200B25C55 /* View */,
 				B589E22A269719C5003B3B79 /* ContactRouter.swift */,
 				B503E85F2697979300F47E4D /* ContactModule.swift */,
 			);
-			path = ContactViewController;
+			path = Contact;
 			sourceTree = "<group>";
 		};
 		B5B9C892268C9B3600D5E28F /* ContactTableViewCell */ = {

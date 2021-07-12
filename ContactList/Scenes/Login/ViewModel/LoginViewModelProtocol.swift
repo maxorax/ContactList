@@ -3,7 +3,7 @@ import UIKit.UIViewController
 
 protocol LoginViewModelProtocol: GIDSignInManagerDelegate {
     
-    var signInIsSuccess: Dynamic<Bool>! { get }
+    var isSignInSuccess: Dynamic<Bool>! { get }
     
     func presentingViewController(vc: UIViewController)
     

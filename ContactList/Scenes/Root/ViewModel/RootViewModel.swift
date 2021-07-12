@@ -6,7 +6,6 @@ class RootViewModel: RootViewModelProtocol {
     private let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
     private let router: RootRouter.Routes
 
-    
     init(container: Container) {
         router = container.router
         isSignInSuccess = Dynamic(false)

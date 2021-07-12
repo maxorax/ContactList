@@ -9,14 +9,13 @@ struct ContactViewModel: ContactViewModelProtocol {
     private let router: ContactRouter.Routes
     
     init(container: Container) {
-        self.router = container.router
-        self.contactDataCellArray = Dynamic([])
+        router = container.router
+        contactDataCellArray = Dynamic([])
         getContacts()
     }
     
     func signOut() {
         gIDSignInManager.signOut()
-        
     }
     
     func getContacts() {
@@ -43,11 +42,11 @@ struct ContactViewModel: ContactViewModelProtocol {
         }
     }
     
-    func openSelectedCells(contactDataCell: ContactDataCell){
+    func openSelectedCells(contactDataCell: ContactDataCell) {
         router.openContactInfoModule(contactDataCell: contactDataCell)
     }
    
-    func openLoginController(){
+    func openLoginController() {
         router.openLoginModule()
     }
 }

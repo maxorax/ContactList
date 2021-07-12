@@ -5,12 +5,9 @@ class Router<GVC>: RouterProtocol, Closable where GVC: UIViewController {
 
     weak var viewController: GenericController?
     var openTransition: Transition?
-  
-   
-
+    
     func open(_ viewController: UIViewController, transition: Transition) {
-        transition.viewController = viewController
-        print("From: \(self.viewController), To: \(viewController)")
+        transition.viewController = self.viewController
         transition.open(viewController)
     }
 
@@ -19,10 +16,12 @@ class Router<GVC>: RouterProtocol, Closable where GVC: UIViewController {
             assertionFailure("You should specify an open transition in order to close a module.")
             return
         }
+        
         guard let viewController = viewController else {
             assertionFailure("Nothing to close.")
             return
         }
+        
         openTransition.close(viewController)
     }
 }

@@ -3,13 +3,13 @@ import UIKit.UIViewController
 
 class LoginViewModel: LoginViewModelProtocol {
     
-    var signInIsSuccess: Dynamic<Bool>!
-    var gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
+    var isSignInSuccess: Dynamic<Bool>!
+    private let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
     private let router: LoginRouter.Routes
     
     init(container: Container) {
-        self.router = container.router
-        self.signInIsSuccess = Dynamic(false)
+        router = container.router
+        isSignInSuccess = Dynamic(false)
         gIDSignInManager.delegate = self
     }
     
@@ -18,13 +18,12 @@ class LoginViewModel: LoginViewModelProtocol {
     }
     
     func signIn(isSuccess: Bool) {
-        self.signInIsSuccess.value = isSuccess
+        self.isSignInSuccess.value = isSuccess
     }
     
-    func openContactViewController(){
+    func openContactViewController() { 
         router.openContactModule()
     }
-    
 }
 
 extension LoginViewModel {

@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginViewModel.signInIsSuccess.bind{
+        loginViewModel.isSignInSuccess.bind{
             [weak self] signInIsSuccess in
             guard signInIsSuccess else { return }
             

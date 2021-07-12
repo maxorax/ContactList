@@ -4,7 +4,6 @@ import Alamofire
 class NetworkManager {
     
     func getContacs(accessToken: String, _ complitionHandler: @escaping ([People]) -> Void ) {
-        
         let urlString = Constants.urlAPI + accessToken
         AF.request(urlString, method: .get).responseJSON{ (response) in
             guard let data = response.data else { return }

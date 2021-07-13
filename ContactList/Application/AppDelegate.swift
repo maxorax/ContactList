@@ -8,8 +8,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let rootModule = RootModuleBuilder.module()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = RootViewController()
+        self.window?.rootViewController = rootModule
         self.window?.makeKeyAndVisible()
         return true
     }

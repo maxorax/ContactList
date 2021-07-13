@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5029C21268DABEC0073E9A8 /* Constants.swift */; };
+		B503E8602697979300F47E4D /* ContactModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E85F2697979300F47E4D /* ContactModule.swift */; };
+		B503E86326979BCF00F47E4D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E86226979BCF00F47E4D /* RootRouter.swift */; };
+		B503E86626979BE500F47E4D /* RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E86526979BE500F47E4D /* RootModule.swift */; };
+		B503E86926979C4700F47E4D /* ContactRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E86826979C4700F47E4D /* ContactRoute.swift */; };
+		B503E86C26979C8500F47E4D /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E86B26979C8500F47E4D /* PushTransition.swift */; };
+		B503E86F26979FED00F47E4D /* RootModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E86E26979FED00F47E4D /* RootModuleBuilder.swift */; };
+		B503E8722697AAF100F47E4D /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E8712697AAF100F47E4D /* LoginModule.swift */; };
+		B503E8752697AB0600F47E4D /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E8742697AB0600F47E4D /* LoginRouter.swift */; };
+		B503E8782697AB2600F47E4D /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E8772697AB2600F47E4D /* LoginRoute.swift */; };
+		B503E87B2697AB6700F47E4D /* LoginTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E87A2697AB6700F47E4D /* LoginTransition.swift */; };
 		B54D50242685B0790069884F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D50222685B0790069884F /* RootViewController.swift */; };
 		B54D50252685B0790069884F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54D50232685B0790069884F /* RootViewController.xib */; };
 		B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */; };
@@ -29,6 +39,15 @@
 		B57CC10B268DAE2500B25C55 /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC10A268DAE2500B25C55 /* EmailAddress.swift */; };
 		B57CC10E268DAE6100B25C55 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC10D268DAE6100B25C55 /* People.swift */; };
 		B57CC111268DAE8D00B25C55 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */; };
+		B589E20C269703E5003B3B79 /* ContactInfoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E20B269703E5003B3B79 /* ContactInfoModule.swift */; };
+		B589E2112697067F003B3B79 /* ContactInfoRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E2102697067F003B3B79 /* ContactInfoRoute.swift */; };
+		B589E2162697079C003B3B79 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E2152697079C003B3B79 /* RouterProtocol.swift */; };
+		B589E2192697083A003B3B79 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E2182697083A003B3B79 /* Transition.swift */; };
+		B589E21D269708FB003B3B79 /* PushNavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E21C269708FA003B3B79 /* PushNavigationTransition.swift */; };
+		B589E22026970913003B3B79 /* Closable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E21F26970913003B3B79 /* Closable.swift */; };
+		B589E22326970959003B3B79 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E22226970959003B3B79 /* Router.swift */; };
+		B589E22626970A45003B3B79 /* ContactInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E22526970A45003B3B79 /* ContactInfoRouter.swift */; };
+		B589E22B269719C5003B3B79 /* ContactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589E22A269719C5003B3B79 /* ContactRouter.swift */; };
 		B5A59B292693330F00C25076 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B282693330F00C25076 /* NetworkManager.swift */; };
 		B5A59B2D2693332800C25076 /* GIDSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B2C2693332800C25076 /* GIDSignInManager.swift */; };
 		B5A59B30269490A400C25076 /* GIDSignInManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A59B2F269490A400C25076 /* GIDSignInManagerDelegate.swift */; };
@@ -46,6 +65,16 @@
 /* Begin PBXFileReference section */
 		01A12B75B7147CE72FCEE2EF /* Pods-ContactList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactList.debug.xcconfig"; path = "Target Support Files/Pods-ContactList/Pods-ContactList.debug.xcconfig"; sourceTree = "<group>"; };
 		B5029C21268DABEC0073E9A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B503E85F2697979300F47E4D /* ContactModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModule.swift; sourceTree = "<group>"; };
+		B503E86226979BCF00F47E4D /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		B503E86526979BE500F47E4D /* RootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModule.swift; sourceTree = "<group>"; };
+		B503E86826979C4700F47E4D /* ContactRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRoute.swift; sourceTree = "<group>"; };
+		B503E86B26979C8500F47E4D /* PushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
+		B503E86E26979FED00F47E4D /* RootModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModuleBuilder.swift; sourceTree = "<group>"; };
+		B503E8712697AAF100F47E4D /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
+		B503E8742697AB0600F47E4D /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		B503E8772697AB2600F47E4D /* LoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
+		B503E87A2697AB6700F47E4D /* LoginTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransition.swift; sourceTree = "<group>"; };
 		B54D50222685B0790069884F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B54D50232685B0790069884F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		B55131CE2685DFBE0043FAA2 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
@@ -69,6 +98,15 @@
 		B57CC10A268DAE2500B25C55 /* EmailAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
 		B57CC10D268DAE6100B25C55 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		B57CC110268DAE8D00B25C55 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		B589E20B269703E5003B3B79 /* ContactInfoModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoModule.swift; sourceTree = "<group>"; };
+		B589E2102697067F003B3B79 /* ContactInfoRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoRoute.swift; sourceTree = "<group>"; };
+		B589E2152697079C003B3B79 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		B589E2182697083A003B3B79 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		B589E21C269708FA003B3B79 /* PushNavigationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNavigationTransition.swift; sourceTree = "<group>"; };
+		B589E21F26970913003B3B79 /* Closable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closable.swift; sourceTree = "<group>"; };
+		B589E22226970959003B3B79 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B589E22526970A45003B3B79 /* ContactInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoRouter.swift; sourceTree = "<group>"; };
+		B589E22A269719C5003B3B79 /* ContactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRouter.swift; sourceTree = "<group>"; };
 		B5A59B282693330F00C25076 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B5A59B2C2693332800C25076 /* GIDSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIDSignInManager.swift; sourceTree = "<group>"; };
 		B5A59B2F269490A400C25076 /* GIDSignInManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIDSignInManagerDelegate.swift; sourceTree = "<group>"; };
@@ -116,10 +154,10 @@
 		B5029C1E268DA6980073E9A8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B5B9C890268C9B1F00D5E28F /* ContactViewController */,
-				B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */,
-				B5B9C88E268C9AD700D5E28F /* LoginViewController */,
-				B5B9C88D268C9AC600D5E28F /* RootViewController */,
+				B5B9C890268C9B1F00D5E28F /* Contact */,
+				B5B9C88F268C9AF200D5E28F /* ContactInfo */,
+				B5B9C88E268C9AD700D5E28F /* Login */,
+				B5B9C88D268C9AC600D5E28F /* Root */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -140,13 +178,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		B5595C51268DCF5800A3B4BA /* ContactViewModel */ = {
+		B5595C51268DCF5800A3B4BA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B5595C52268DCF7000A3B4BA /* ContactViewModel.swift */,
 				B5595C56268DCFB300A3B4BA /* ContactViewModelProtocol.swift */,
 			);
-			path = ContactViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B570C1942682008D00F020A8 = {
@@ -170,6 +208,7 @@
 		B570C19F2682008D00F020A8 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				B589E20E2697063B003B3B79 /* Routing */,
 				B5A59B27269332EE00C25076 /* Manager */,
 				B5595C4E268DCF0B00A3B4BA /* Dynamic.swift */,
 				B5029C1F268DA6EF0073E9A8 /* Shared */,
@@ -267,6 +306,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B589E20E2697063B003B3B79 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				B589E21B269708DD003B3B79 /* Transitions */,
+				B589E20F26970658003B3B79 /* Routers */,
+				B589E2152697079C003B3B79 /* RouterProtocol.swift */,
+				B589E2182697083A003B3B79 /* Transition.swift */,
+				B589E21F26970913003B3B79 /* Closable.swift */,
+				B589E22226970959003B3B79 /* Router.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		B589E20F26970658003B3B79 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				B589E2102697067F003B3B79 /* ContactInfoRoute.swift */,
+				B503E86826979C4700F47E4D /* ContactRoute.swift */,
+				B503E8772697AB2600F47E4D /* LoginRoute.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		B589E21B269708DD003B3B79 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				B589E21C269708FA003B3B79 /* PushNavigationTransition.swift */,
+				B503E86B26979C8500F47E4D /* PushTransition.swift */,
+				B503E87A2697AB6700F47E4D /* LoginTransition.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		B5A59B27269332EE00C25076 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,69 +348,78 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		B5A59B322694996700C25076 /* Model */ = {
+		B5A59B322694996700C25076 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B5A59B332694998600C25076 /* RootViewModelProtocol.swift */,
 				B5A59B36269499E500C25076 /* RootViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B5A59B3A2694B36500C25076 /* ContactInfoViewModel */ = {
+		B5A59B3A2694B36500C25076 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */,
 				B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */,
 			);
-			path = ContactInfoViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B5B1EBDA26925F2E00722955 /* Model */ = {
+		B5B1EBDA26925F2E00722955 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B5B1EBDC2692600300722955 /* LoginViewModelProtocol.swift */,
 				B5B1EBDF269260C600722955 /* LoginViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B5B9C88D268C9AC600D5E28F /* RootViewController */ = {
+		B5B9C88D268C9AC600D5E28F /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				B5A59B322694996700C25076 /* Model */,
+				B5A59B322694996700C25076 /* ViewModel */,
 				B57CC118268DB4EE00B25C55 /* View */,
+				B503E86226979BCF00F47E4D /* RootRouter.swift */,
+				B503E86526979BE500F47E4D /* RootModule.swift */,
+				B503E86E26979FED00F47E4D /* RootModuleBuilder.swift */,
 			);
-			path = RootViewController;
+			path = Root;
 			sourceTree = "<group>";
 		};
-		B5B9C88E268C9AD700D5E28F /* LoginViewController */ = {
+		B5B9C88E268C9AD700D5E28F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B5B1EBDA26925F2E00722955 /* Model */,
+				B5B1EBDA26925F2E00722955 /* ViewModel */,
 				B57CC117268DB4E800B25C55 /* View */,
+				B503E8712697AAF100F47E4D /* LoginModule.swift */,
+				B503E8742697AB0600F47E4D /* LoginRouter.swift */,
 			);
-			path = LoginViewController;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		B5B9C88F268C9AF200D5E28F /* ContactInfoViewController */ = {
+		B5B9C88F268C9AF200D5E28F /* ContactInfo */ = {
 			isa = PBXGroup;
 			children = (
-				B5A59B3A2694B36500C25076 /* ContactInfoViewModel */,
+				B5A59B3A2694B36500C25076 /* ViewModel */,
 				B57CC116268DB4E100B25C55 /* View */,
+				B589E20B269703E5003B3B79 /* ContactInfoModule.swift */,
+				B589E22526970A45003B3B79 /* ContactInfoRouter.swift */,
 			);
-			path = ContactInfoViewController;
+			path = ContactInfo;
 			sourceTree = "<group>";
 		};
-		B5B9C890268C9B1F00D5E28F /* ContactViewController */ = {
+		B5B9C890268C9B1F00D5E28F /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				B5595C51268DCF5800A3B4BA /* ContactViewModel */,
+				B5595C51268DCF5800A3B4BA /* ViewModel */,
 				B57CC114268DB44900B25C55 /* Cells */,
 				B5B9C895268C9B5D00D5E28F /* Models */,
 				B57CC115268DB4D200B25C55 /* View */,
+				B589E22A269719C5003B3B79 /* ContactRouter.swift */,
+				B503E85F2697979300F47E4D /* ContactModule.swift */,
 			);
-			path = ContactViewController;
+			path = Contact;
 			sourceTree = "<group>";
 		};
 		B5B9C892268C9B3600D5E28F /* ContactTableViewCell */ = {
@@ -500,18 +581,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B503E87B2697AB6700F47E4D /* LoginTransition.swift in Sources */,
+				B589E2192697083A003B3B79 /* Transition.swift in Sources */,
 				B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */,
 				B5A59B3C2694B3A900C25076 /* ContactInfoViewModel.swift in Sources */,
 				B55131D42685ED0A0043FAA2 /* ContactTableViewCell.swift in Sources */,
 				B5595C5B268DFC9600A3B4BA /* СontactDataCell.swift in Sources */,
 				B57CC10B268DAE2500B25C55 /* EmailAddress.swift in Sources */,
 				B5595C57268DCFB300A3B4BA /* ContactViewModelProtocol.swift in Sources */,
+				B503E8752697AB0600F47E4D /* LoginRouter.swift in Sources */,
 				B5A59B30269490A400C25076 /* GIDSignInManagerDelegate.swift in Sources */,
 				B5595C4F268DCF0B00A3B4BA /* Dynamic.swift in Sources */,
+				B589E22B269719C5003B3B79 /* ContactRouter.swift in Sources */,
+				B503E86C26979C8500F47E4D /* PushTransition.swift in Sources */,
 				B5A59B342694998600C25076 /* RootViewModelProtocol.swift in Sources */,
 				B5B1EBDD2692600400722955 /* LoginViewModelProtocol.swift in Sources */,
+				B503E8602697979300F47E4D /* ContactModule.swift in Sources */,
+				B503E86626979BE500F47E4D /* RootModule.swift in Sources */,
 				B5649D262686024F00F36952 /* Peoples.swift in Sources */,
 				B57CC10E268DAE6100B25C55 /* People.swift in Sources */,
+				B503E8722697AAF100F47E4D /* LoginModule.swift in Sources */,
+				B589E2112697067F003B3B79 /* ContactInfoRoute.swift in Sources */,
+				B503E86326979BCF00F47E4D /* RootRouter.swift in Sources */,
+				B589E22026970913003B3B79 /* Closable.swift in Sources */,
 				B570C1BC2682012B00F020A8 /* LoginViewController.swift in Sources */,
 				B57CC108268DAE0C00B25C55 /* Photo.swift in Sources */,
 				B5A59B37269499E500C25076 /* RootViewModel.swift in Sources */,
@@ -519,13 +611,21 @@
 				B5A59B292693330F00C25076 /* NetworkManager.swift in Sources */,
 				B5A59B2D2693332800C25076 /* GIDSignInManager.swift in Sources */,
 				B570C1A12682008D00F020A8 /* AppDelegate.swift in Sources */,
+				B503E86926979C4700F47E4D /* ContactRoute.swift in Sources */,
+				B589E22326970959003B3B79 /* Router.swift in Sources */,
+				B503E86F26979FED00F47E4D /* RootModuleBuilder.swift in Sources */,
+				B589E2162697079C003B3B79 /* RouterProtocol.swift in Sources */,
 				B5595C53268DCF7000A3B4BA /* ContactViewModel.swift in Sources */,
 				B57CC105268DADFD00B25C55 /* Name.swift in Sources */,
+				B589E20C269703E5003B3B79 /* ContactInfoModule.swift in Sources */,
 				B57CC111268DAE8D00B25C55 /* PhoneNumber.swift in Sources */,
 				B55131D92685F3930043FAA2 /* ContactInfoViewController.swift in Sources */,
+				B589E22626970A45003B3B79 /* ContactInfoRouter.swift in Sources */,
+				B589E21D269708FB003B3B79 /* PushNavigationTransition.swift in Sources */,
 				B5B1EBE0269260C600722955 /* LoginViewModel.swift in Sources */,
 				B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */,
 				B5A59B3F2694B40E00C25076 /* ContactInfoViewModelProtocol.swift in Sources */,
+				B503E8782697AB2600F47E4D /* LoginRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

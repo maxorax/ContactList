@@ -3,10 +3,12 @@ import GoogleSignIn
 
 class LoginViewController: UIViewController {
     
-    var loginViewModel: LoginViewModelProtocol! 
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    
+    var viewModel: LoginViewModelProtocol! 
     
     init(_ viewModel: LoginViewModel) {
-        loginViewModel = viewModel
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -14,26 +16,17 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @IBOutlet weak var signInButton: GIDSignInButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginViewModel.isSignInSuccess.bind{
+        viewModel.isSignInSuccess.bind {
             [weak self] signInIsSuccess in
             guard signInIsSuccess else { return }
             
-            self?.showContactVC()
+            self?.viewModel.openContactViewController()
         }
-        loginViewModel.presentingViewController(vc: self)
-    }
-}
-
-//MARK: -Routing
-
-extension LoginViewController {
-    func showContactVC() {
-        loginViewModel.openContactViewController()
+        
+        viewModel.presentingViewController(vc: self)
     }
 }
 

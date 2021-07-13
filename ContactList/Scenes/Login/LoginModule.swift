@@ -3,8 +3,6 @@ import UIKit
 class LoginModule {
     let viewController: LoginViewController
 
-    private let viewModel: LoginViewModel
-    
     init( transition: Transition?) {
         let router = LoginRouter()
         let viewModelContainer = LoginViewModel.Container(
@@ -15,6 +13,5 @@ class LoginModule {
         router.viewController = viewController
         router.openTransition = transition
         self.viewController = viewController
-        self.viewModel = viewModel
     }
 }

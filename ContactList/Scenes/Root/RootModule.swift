@@ -2,7 +2,6 @@ import UIKit
 
 class RootModule {
     let viewController: RootViewController
-    private let viewModel: RootViewModel
     
     init( transition: Transition?) {
         let router = RootRouter()
@@ -12,6 +11,5 @@ class RootModule {
         router.viewController = viewController
         router.openTransition = transition
         self.viewController = viewController
-        self.viewModel = viewModel        
     }
 }

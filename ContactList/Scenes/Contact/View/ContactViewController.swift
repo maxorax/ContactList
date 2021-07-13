@@ -2,15 +2,11 @@ import UIKit
 
 final class ContactViewController: UIViewController {
     
-    var contactDataCellArray: [ContactDataCell] = []
-    var viewModel: ContactViewModelProtocol! {
-        didSet{
-            
-        }
-    }
-    
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
+    
+    private var contactDataCellArray: [ContactDataCell] = []
+    var viewModel: ContactViewModelProtocol!
     
     init(_ viewModel: ContactViewModel) {
         self.viewModel = viewModel

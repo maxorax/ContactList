@@ -2,7 +2,6 @@ import UIKit
 
 class ContactInfoModule {
     let viewController: ContactInfoViewController
-    private let viewModel: ContactInfoViewModel
     
     init(contactDataCell: ContactDataCell, transition: Transition?) {
         let router = ContactInfoRouter()
@@ -15,6 +14,5 @@ class ContactInfoModule {
         router.viewController = viewController
         router.openTransition = transition
         self.viewController = viewController
-        self.viewModel = viewModel
     }
 }

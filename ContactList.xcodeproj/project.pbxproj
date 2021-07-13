@@ -360,8 +360,8 @@
 		B5A59B3A2694B36500C25076 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B589E20B269703E5003B3B79 /* ContactInfoModule.swift */,
-				B589E22526970A45003B3B79 /* ContactInfoRouter.swift */,
+				B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */,
+				B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -403,8 +403,8 @@
 			children = (
 				B5A59B3A2694B36500C25076 /* ViewModel */,
 				B57CC116268DB4E100B25C55 /* View */,
-				B5A59B3B2694B3A800C25076 /* ContactInfoViewModel.swift */,
-				B5A59B3E2694B40E00C25076 /* ContactInfoViewModelProtocol.swift */,
+				B589E20B269703E5003B3B79 /* ContactInfoModule.swift */,
+				B589E22526970A45003B3B79 /* ContactInfoRouter.swift */,
 			);
 			path = ContactInfo;
 			sourceTree = "<group>";

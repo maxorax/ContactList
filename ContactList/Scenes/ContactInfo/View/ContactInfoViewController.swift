@@ -2,10 +2,10 @@ import UIKit
 
 class ContactInfoViewController: UIViewController {
     
-    var contactInfoViewModel: ContactInfoViewModelProtocol!
+    var viewModel: ContactInfoViewModelProtocol!
     
     init(_ viewModel: ContactInfoViewModel) {
-        self.contactInfoViewModel = viewModel
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -21,25 +21,25 @@ class ContactInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contactInfoViewModel.name.bind{
+        viewModel.name.bind {
             [weak self] name in
             self?.nameLabel.text = "Full name: \(name)"
         }
-        contactInfoViewModel.phoneNumber.bind{
+        viewModel.phoneNumber.bind {
             [weak self] phoneNumber in
             self?.phoneNumberLabel.text = "Phone number: \(phoneNumber)"
         }
-        contactInfoViewModel.email.bind{
+        viewModel.email.bind {
             [weak self] email in
             self?.emailLabel.text = "Email: \(email)"
         }
-        contactInfoViewModel.photoData.bind{
+        viewModel.photoData.bind {
             [weak self] photoData in
             self?.photoImageView.image = UIImage(data: photoData)
         }
         
         navigationItem.title = "Information"
-        contactInfoViewModel.getContact()
+        viewModel.getContact()
     }
 
 }

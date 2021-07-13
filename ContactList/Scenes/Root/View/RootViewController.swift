@@ -2,10 +2,10 @@ import UIKit
 
 class RootViewController: UIViewController {
     
-    var rootViewModel: RootViewModelProtocol!
+    var viewModel: RootViewModelProtocol!
     
     init(_ viewModel: RootViewModel) {
-        rootViewModel = viewModel
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -16,28 +16,17 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rootViewModel.isSignInSuccess.bind{
+        viewModel.isSignInSuccess.bind {
             [weak self] signInSuccess in
             guard signInSuccess else {
-                self?.showRegisterLoginVC()
+                self?.viewModel.openLoginController()
                 return
             }
             
-            self?.showContactVC()
+            self?.viewModel.openConctactController()
         }
 
-        rootViewModel.restore()
+        viewModel.restore()
     }
 }
 
-//MARK: -Routing
-
-extension RootViewController {
-    func showContactVC() {
-        rootViewModel.openConctactController()
-    }
-    
-    func showRegisterLoginVC() {
-        rootViewModel.openLoginController()
-    }
-}

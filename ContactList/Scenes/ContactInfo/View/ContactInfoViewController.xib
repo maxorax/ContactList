@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactInfoViewController" customModule="ContactList" customModuleProvider="target">
             <connections>
                 <outlet property="emailLabel" destination="HZR-ey-rm1" id="5vI-nN-M1r"/>
+                <outlet property="indicator" destination="Ve5-bP-7JD" id="4LR-hk-AzN"/>
                 <outlet property="nameLabel" destination="mDu-dH-oCt" id="gkX-ns-nGI"/>
                 <outlet property="phoneNumberLabel" destination="T2L-Tn-NrJ" id="h58-2l-AGa"/>
                 <outlet property="photoImageView" destination="LAX-5b-qYf" id="YqA-WG-hSM"/>
@@ -48,14 +49,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ve5-bP-7JD">
+                    <rect key="frame" x="197" y="221" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="LAX-5b-qYf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="07f-k7-SPz"/>
                 <constraint firstItem="mDu-dH-oCt" firstAttribute="top" secondItem="LAX-5b-qYf" secondAttribute="bottom" constant="20" id="Gki-Oa-oTb"/>
+                <constraint firstItem="Ve5-bP-7JD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IOd-ph-aE1"/>
                 <constraint firstItem="HZR-ey-rm1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Pbz-ko-iSB"/>
                 <constraint firstItem="T2L-Tn-NrJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="S6X-MB-6Kl"/>
+                <constraint firstItem="Ve5-bP-7JD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="133" id="Wmf-eA-RaG"/>
                 <constraint firstItem="mDu-dH-oCt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kBX-X2-mDE"/>
                 <constraint firstItem="T2L-Tn-NrJ" firstAttribute="top" secondItem="HZR-ey-rm1" secondAttribute="bottom" constant="20" id="oLj-OV-Jvw"/>
                 <constraint firstItem="LAX-5b-qYf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="osr-An-9Iv"/>

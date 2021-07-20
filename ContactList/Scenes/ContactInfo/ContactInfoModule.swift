@@ -3,11 +3,11 @@ import UIKit
 class ContactInfoModule {
     let viewController: ContactInfoViewController
     
-    init(contactDataCell: ContactDataCell, transition: Transition?) {
+    init(people: People, transition: Transition?) {
         let router = ContactInfoRouter()
         let viewModelContainer = ContactInfoViewModel.Container(
             router: router,
-            contactDataCell: contactDataCell
+            people: people
         )
         let viewModel = ContactInfoViewModel(container: viewModelContainer)
         let viewController = ContactInfoViewController(viewModel)

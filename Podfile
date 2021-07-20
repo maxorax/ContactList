@@ -8,4 +8,8 @@ target 'ContactList' do
   # Pods for ContactList
   pod 'GoogleSignIn'
   pod 'Alamofire', '~> 5.2'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+  pod 'RxViewController'
+  
 end

@@ -1,12 +1,17 @@
 import UIKit
 import GoogleSignIn
+import RxSwift
+import RxCocoa
+import RxViewController
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var loginButton: UIButton!
     
-    var viewModel: LoginViewModelProtocol! 
-    
+    var viewModel: LoginViewModel!
+    let disposeBag = DisposeBag()
+
     init(_ viewModel: LoginViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -18,15 +23,17 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel.isSignInSuccess.bind {
-            [weak self] signInIsSuccess in
-            guard signInIsSuccess else { return }
-            
-            self?.viewModel.openContactViewController()
-        }
-        
+
+        bindViewModel()
         viewModel.presentingViewController(vc: self)
     }
+    
+    private func bindViewModel() {
+        let signInTrigger = self.rx.viewWillAppear.asDriver().mapToVoid()
+        let input = LoginViewModel.Input( signInTrigger: signInTrigger, vc: self, disposeBag: disposeBag)
+        viewModel.transform(input: input)
+    }
 }
+
+
 

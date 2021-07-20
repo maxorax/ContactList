@@ -1,11 +1,11 @@
 import Foundation
-
+import RxSwift
 protocol ContactInfoViewModelProtocol {
-    var name: Dynamic<String>! { get }
-    var phoneNumber: Dynamic<String>! { get }
-    var email: Dynamic<String>! { get }
-    var photoData: Dynamic<Data>! { get }
-    var contactDataCell: ContactDataCell { get }
+    associatedtype Input
+    associatedtype Output
     
-    func getContact()
+    func getContact(name: String, phoneNumber: String?, email: String, photoUrl: String?) -> Single<People>
+    
+    @discardableResult func transform(input: Input) -> Output
+
 }

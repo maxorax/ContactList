@@ -38,7 +38,8 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
             name: self.people.names[0].displayName,
             phoneNumber: self.people.phoneNumbers?[0].value,
             email: self.people.emailAddresses[0].value,
-            photoUrl: self.people.photos?[0].url)
+            photoUrl: self.people.photos?[0].url
+            )
             .asDriverOnErrorJustComplete()
         return Output(people: people)
     }

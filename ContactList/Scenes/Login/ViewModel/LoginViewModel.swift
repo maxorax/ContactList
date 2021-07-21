@@ -21,17 +21,20 @@ class LoginViewModel: LoginViewModelProtocol {
     }
     
     func transform(input: Input) {
-        _ = input.signInTrigger.flatMapLatest({ _  in
-            return self.gIDSignInManager
-                .signIn(vc: input.vc)
-                .asDriver(onErrorJustReturn: false)
-        }).drive(onNext:{ value in
-            guard value == true else {
-                return
-            }
+        _ = input.signInTrigger
+            .flatMapLatest({ _  in
+                return self.gIDSignInManager
+                    .signIn(vc: input.vc)
+                    .asDriver(onErrorJustReturn: false)
+            })
+            .drive(onNext:{ value in
+                guard value == true else {
+                    return
+                }
             
-            self.openContactViewController()
-        }).disposed(by: input.disposeBag)
+                self.openContactViewController()
+            })
+            .disposed(by: input.disposeBag)
     }
 }
 

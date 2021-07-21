@@ -21,13 +21,16 @@ class RootViewModel: RootViewModelProtocol {
     }
     
     func transform(input: Input) -> Output {
-        _ = input.viewTrigger.flatMapLatest { _ in
-            return self.gIDSignInManager.restore()
-                .trackError(self.errorTracker)
-                .asDriverOnErrorJustComplete()
-        }.drive(onNext:{ value in
-            value ? self.openConctactController() : self.openLoginController()
-        }).disposed(by: input.disposeBag)
+        _ = input.viewTrigger
+            .flatMapLatest { _ in
+                return self.gIDSignInManager.restore()
+                    .trackError(self.errorTracker)
+                    .asDriverOnErrorJustComplete()
+            }
+            .drive(onNext:{ value in
+                value ? self.openConctactController() : self.openLoginController()
+            })
+            .disposed(by: input.disposeBag)
         return Output(errorTracker: errorTracker)
     }
 }

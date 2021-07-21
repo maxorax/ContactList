@@ -57,16 +57,19 @@ final class ContactViewController: UIViewController {
         let input = ContactViewModel.Input.init(contactTrigger: contactTrigger, disposeBag: disposeBag)
         let output = viewModel.transform(input: input)
         
-        output.contacts.drive(onNext: {
-            (contacts) in
-            self.peoples = contacts
-            self.indicator.stopAnimating()
-            self.tableView.reloadData()
-        }
-        ).disposed(by: disposeBag)
-        output.errorTracker.drive(onNext:{ error in
-            self.showAlert()
-        }).disposed(by: disposeBag)
+        output.contacts
+            .drive(onNext: { (contacts) in
+                self.peoples = contacts
+                self.indicator.stopAnimating()
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+        
+        output.errorTracker
+            .drive(onNext:{ error in
+                self.showAlert()
+            })
+            .disposed(by: disposeBag)
         
     }
 
@@ -102,15 +105,24 @@ extension ContactViewController: UITableViewDelegate {
     
 }
 
+//MARK: -Alert
+
 extension ContactViewController {
     private func showAlert() {
         let alert = UIAlertController(
             title: "Error!",
             message: "The internet connection is disconnected. Turn on the internet and click OK.",
-            preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            self.bindViewModel()
-        }))
+            preferredStyle: .actionSheet
+        )
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: { _ in
+                    self.bindViewModel()
+                }
+            )
+        )
         self.present(alert, animated: true, completion: nil)
     }
 }

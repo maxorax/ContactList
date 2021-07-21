@@ -27,9 +27,11 @@ class RootViewController: UIViewController {
         let viewTrigger = self.rx.viewWillAppear.asDriver().mapToVoid()
         let input = RootViewModel.Input(viewTrigger: viewTrigger, disposeBag: disposeBag)
         let output = viewModel.transform(input: input)
-        output.errorTracker.drive(onNext: { error in
-            self.showAlert()
-        }).disposed(by: disposeBag)
+        output.errorTracker
+            .drive(onNext: { error in
+                self.showAlert()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -38,10 +40,17 @@ extension RootViewController {
         let alert = UIAlertController(
             title: "Error!",
             message: "The internet connection is disconnected. Turn on the internet and click OK.",
-            preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            self.bindViewModel()
-        }))
+            preferredStyle: .actionSheet
+        )
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: { _ in
+                    self.bindViewModel()
+                }
+            )
+        )
         self.present(alert, animated: true, completion: nil)
     }
 }

@@ -1,28 +1,48 @@
 import Foundation
 import Alamofire
+import RxSwift
 
 class NetworkManager {
-    
-    func getContacs(accessToken: String, _ complitionHandler: @escaping ([People]) -> Void ) {
-        let urlString = Constants.urlAPI + accessToken
-        AF.request(urlString, method: .get).responseJSON{ (response) in
-            guard let data = response.data else { return }
-            
-            do{
-              let peoples = try JSONDecoder().decode(Peoples.self, from: data)
-              complitionHandler(peoples.people)
-            } catch let error {
-                print(error.localizedDescription)
+        
+    func getAllContacts(accessToken: String) -> Single<[People]> {
+        return Single.create{ single in
+            let urlString = Constants.urlAPI + accessToken
+            AF.request(urlString, method: .get).responseJSON{ (response) in
+                guard let data = response.data else {
+                    guard let error = response.error?.underlyingError else {
+                        return
+                    }
+                    
+                    single(.failure(error))
+                    return
+                }
+                
+                do{
+                  let peoples = try JSONDecoder().decode(Peoples.self, from: data)
+                    single(.success(peoples.people))
+                } catch let error {
+                    single(.failure(error))
+                }
+            }
+            return Disposables.create{
+                AF.cancelAllRequests()
             }
         }
     }
     
-    func getContactPhoto(photoUrl: String,_ complitionHandeler: @escaping (Data) -> Void ) {
-        AF.request(photoUrl, method: .get).response{
-            response in
-            guard let data = response.data else { return }
-                
-            complitionHandeler(data)
+  
+    func getPhoto(photoUrl: String) -> Single<Data> {
+        return Single.create{ single in
+            DispatchQueue.global().async {
+                do {
+                    single(.success(try Data(contentsOf: URL(string: photoUrl)!)))
+                }
+                catch let error {
+                    single(.failure(error))                }
+            }
+            return Disposables.create{ AF.cancelAllRequests() }
+
         }
     }
+    
 }

@@ -2,13 +2,13 @@ import Foundation
 
 struct ContactDataCell {
     var name: String 
-    var photoData: Data?
+    var photoUrl: String?
     var email: String
     var phoneNumber: String
     
     init() {
         name = ""
-        photoData = nil
+        photoUrl = nil
         email = ""
         phoneNumber = ""
     }

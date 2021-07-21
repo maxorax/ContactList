@@ -1,13 +1,17 @@
 import Foundation
+import RxSwift
 
 protocol ContactViewModelProtocol {
-    var contactDataCellArray: Dynamic<[ContactDataCell]>! { get }
-
-    func getContacts()
+    associatedtype Input
+    associatedtype Output
     
     func signOut()
     
-    func openSelectedCells(contactDataCell: ContactDataCell)
+    func openSelectedCells(people: People)
     
     func openLoginController()
+    
+    @discardableResult func transform(input: Input) -> Output
 }
+
+

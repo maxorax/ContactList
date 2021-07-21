@@ -1,58 +1,67 @@
 import Foundation
+import RxSwift
+import RxCocoa
 
 struct ContactViewModel: ContactViewModelProtocol {
-    
-    var contactDataCellArray: Dynamic<[ContactDataCell]>!
     
     private let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
     private let networkManager: NetworkManager = NetworkManager()
     private let router: ContactRouter.Routes
+    private let errorTracker: ErrorTracker = ErrorTracker()
+    
     
     init(container: Container) {
         router = container.router
-        contactDataCellArray = Dynamic([])
-        getContacts()
     }
     
     func signOut() {
         gIDSignInManager.signOut()
     }
     
-    func getContacts() {
-        guard
-            let accessToken = gIDSignInManager.getAccessToken()
-        else { return }
+    func transform(input: Input) -> Output {
+
+        let accessToken = gIDSignInManager.getAccessToken()!
+
+        let contacts = self.networkManager
+            .getAllContacts(accessToken: accessToken)
+            .trackError(errorTracker)
+            .asDriverOnErrorJustComplete()
         
-        networkManager.getContacs(accessToken: accessToken) { (peoples) in
-            for index in 0..<peoples.count {
-                contactDataCellArray.value.append(ContactDataCell())
-                self.contactDataCellArray.value[index].name =
-                    peoples[index].names[0].displayName
-                self.contactDataCellArray.value[index].email =
-                  peoples[index].emailAddresses[0].value
-                self.contactDataCellArray.value[index].phoneNumber =
-                    peoples[index].phoneNumbers?[0].value ??
-                    "No number"
-                if let photoUrl = peoples[index].photos?[0].url {
-                    networkManager.getContactPhoto(photoUrl: photoUrl) { (data) in
-                        self.contactDataCellArray.value[index].photoData = data
-                    }
-                }
-            }
-        }
+        return Output(contacts: contacts, errorTracker: errorTracker)
+
     }
     
-    func openSelectedCells(contactDataCell: ContactDataCell) {
-        router.openContactInfoModule(contactDataCell: contactDataCell)
+    func openSelectedCells(people: People) {
+        router.openContactInfoModule(people: people)
     }
    
     func openLoginController() {
         router.openLoginModule()
     }
+    
 }
 
 extension ContactViewModel {
     struct Container {
         var router: ContactRouter
+    }
+    struct Input {
+        let contactTrigger: Driver<Void>
+        let disposeBag : DisposeBag
+    }
+    struct Output {
+        let contacts: Driver<[People]>
+        let errorTracker: ErrorTracker
+    }
+    
+}
+
+extension ContactViewModel: ContactTableViewCellDelegate {
+    
+    func downloadImage(url: String) -> Driver<Data> {
+        return networkManager.getPhoto(photoUrl: url)
+            .trackError(errorTracker)
+            .asDriverOnErrorJustComplete()
+        
     }
 }

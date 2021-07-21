@@ -13,10 +13,22 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.5.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - RxViewController (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - GoogleSignIn
+  - RxCocoa (= 6.2.0)
+  - RxSwift (= 6.2.0)
+  - RxViewController
 
 SPEC REPOS:
   trunk:
@@ -25,6 +37,10 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxViewController
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -32,7 +48,11 @@ SPEC CHECKSUMS:
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 5b53231ef6920f149ab84b2969cb0ab572da3077
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
 
-PODFILE CHECKSUM: e290193cb4a39fcabc36edff7268c4dec6b38df3
+PODFILE CHECKSUM: e84874c30a30c29a2ff9d10a6700088fcb4dd05b
 
 COCOAPODS: 1.10.1

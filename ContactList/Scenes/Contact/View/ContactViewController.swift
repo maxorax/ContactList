@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxViewController
+import Domain
 
 
 final class ContactViewController: UIViewController {
@@ -9,7 +10,7 @@ final class ContactViewController: UIViewController {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
     
-    private var peoples: [People]
+    private var peoples: [Domain.People]
     private var viewModel: ContactViewModel!
     let disposeBag = DisposeBag()
     

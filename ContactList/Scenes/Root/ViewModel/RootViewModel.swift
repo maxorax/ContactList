@@ -1,15 +1,21 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import Domain
+import SignInPlatform
 
 class RootViewModel: RootViewModelProtocol {
     
-    private let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
+    private let signInUseCase: Domain.SignInUseCase
+    private let accessUseCase: Domain.AccessUseCase
+
     private let router: RootRouter.Routes
     private let errorTracker: ErrorTracker = ErrorTracker()
 
     init(container: Container) {
         router = container.router
+        signInUseCase = container.signInUseCase
+        accessUseCase = container.accessUseCase
     }
     
     func openConctactController() {
@@ -23,12 +29,19 @@ class RootViewModel: RootViewModelProtocol {
     func transform(input: Input) -> Output {
         _ = input.viewTrigger
             .flatMapLatest { _ in
-                return self.gIDSignInManager.restore()
+                return self.signInUseCase.restore()
                     .trackError(self.errorTracker)
                     .asDriverOnErrorJustComplete()
             }
             .drive(onNext:{ value in
-                value ? self.openConctactController() : self.openLoginController()
+                guard value else {
+                    self.openLoginController()
+                    return
+                }
+                
+                self.accessUseCase.storeToken(container: Domain.TokenContainer (token:  self.signInUseCase.getAccessToken()!))
+                self.openConctactController()
+                //value ? self.openConctactController() : self.openLoginController()
             })
             .disposed(by: input.disposeBag)
         return Output(errorTracker: errorTracker)
@@ -37,7 +50,9 @@ class RootViewModel: RootViewModelProtocol {
 
 extension RootViewModel {
     struct Container {
-        var router: RootRouter
+        let router: RootRouter
+        let signInUseCase: Domain.SignInUseCase
+        let accessUseCase: Domain.AccessUseCase
     }
     struct Input {
         var viewTrigger: Driver<Void> = .just(())

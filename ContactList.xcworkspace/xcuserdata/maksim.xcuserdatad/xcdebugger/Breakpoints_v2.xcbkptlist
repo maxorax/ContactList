@@ -286,8 +286,8 @@
             filePath = "ContactList/Routing/Routers/ContactInfoRoute.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
             landmarkName = "openContactInfoModule(people:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -606,8 +606,8 @@
             filePath = "ContactList/Routing/Routers/ContactInfoRoute.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
             landmarkName = "openContactInfoModule(people:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -622,8 +622,8 @@
             filePath = "ContactList/Routing/Routers/ContactInfoRoute.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "openContactInfoModule(people:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -686,8 +686,8 @@
             filePath = "ContactList/Scenes/Contact/ViewModel/ContactViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -702,8 +702,8 @@
             filePath = "ContactList/Scenes/Contact/ViewModel/ContactViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -718,8 +718,8 @@
             filePath = "ContactList/Scenes/Contact/ViewModel/ContactViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -734,8 +734,8 @@
             filePath = "ContactList/Scenes/Contact/View/ContactViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -750,8 +750,8 @@
             filePath = "ContactList/Scenes/Contact/View/ContactViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "bindViewModel()"
             landmarkType = "7">
          </BreakpointContent>
@@ -862,8 +862,8 @@
             filePath = "ContactList/Scenes/Contact/ViewModel/ContactViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -990,8 +990,8 @@
             filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1022,8 +1022,8 @@
             filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1070,8 +1070,8 @@
             filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1118,8 +1118,8 @@
             filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1134,8 +1134,8 @@
             filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1182,8 +1182,8 @@
             filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1230,8 +1230,8 @@
             filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1278,8 +1278,8 @@
             filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1310,8 +1310,8 @@
             filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1422,8 +1422,8 @@
             filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1470,8 +1470,8 @@
             filePath = "ContactList/Scenes/Contact/Cells/ContactTableViewCell/ContactTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "setup(people:index:output:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1490,38 +1490,6 @@
             endingLineNumber = "24"
             landmarkName = "getAllContacts(accessToken:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B0182AFE-727A-4E13-8907-0D2CA1F07B41 - 7851d7bacae05fe1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in closure #1 ((Swift.Result&lt;Swift.Array&lt;ContactList.People&gt;, Swift.Error&gt;) -&gt; ()) -&gt; RxSwift.Disposable in ContactList.NetworkManager.getAllContacts(accessToken: Swift.String) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, Swift.Array&lt;ContactList.People&gt;&gt;"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Manager/NetworkManager/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "787">
-               </Location>
-               <Location
-                  uuid = "B0182AFE-727A-4E13-8907-0D2CA1F07B41 - 7851d7bacae05fe1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in closure #1 ((Swift.Result&lt;Swift.Array&lt;ContactList.People&gt;, Swift.Error&gt;) -&gt; ()) -&gt; RxSwift.Disposable in ContactList.NetworkManager.getAllContacts(accessToken: Swift.String) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, Swift.Array&lt;ContactList.People&gt;&gt;"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Manager/NetworkManager/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "1250">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

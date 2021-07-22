@@ -2,18 +2,21 @@ import Foundation
 import UIKit.UIViewController
 import RxSwift
 import RxCocoa
+import Domain
+import SignInPlatform
 
 class LoginViewModel: LoginViewModelProtocol {
   
-    private let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
+    private let signInUseCase: Domain.SignInUseCase
     private let router: LoginRouter.Routes
     
     init(container: Container) {
         router = container.router
+        signInUseCase = container.signInUseCase
     }
     
     func presentingViewController(vc: UIViewController) {
-        gIDSignInManager.presentingViewController(vc: vc)
+        signInUseCase.presentingViewController(vc: vc)
     }
     
     func openContactViewController() { 
@@ -23,7 +26,7 @@ class LoginViewModel: LoginViewModelProtocol {
     func transform(input: Input) {
         _ = input.signInTrigger
             .flatMapLatest({ _  in
-                return self.gIDSignInManager
+                return self.signInUseCase
                     .signIn(vc: input.vc)
                     .asDriver(onErrorJustReturn: false)
             })
@@ -40,7 +43,8 @@ class LoginViewModel: LoginViewModelProtocol {
 
 extension LoginViewModel {
     struct Container{
-        var router: LoginRouter
+        let router: LoginRouter
+        let signInUseCase: Domain.SignInUseCase
     }
     struct Input {
         var signInTrigger: Driver<Void>

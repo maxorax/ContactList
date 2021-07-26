@@ -7,7 +7,6 @@ public protocol SignInUseCase: GIDSignInDelegate {
     
     func signIn(vc: UIViewController) -> Single<Bool>
     func restore() -> Single<Bool>
-    func getAccessToken() -> String?
-    func presentingViewController(vc: UIViewController)
+    func getAccessToken() -> Single<Domain.TokenContainer>
     func signOut()
 }

@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         bindViewModel()
-        viewModel.presentingViewController(vc: self)
+        //viewModel.presentingViewController(vc: self)
     }
     
     private func bindViewModel() {

@@ -16,31 +16,23 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
         
     }
     
-    func getContact(name: Domain.Name, phoneNumber: Domain.PhoneNumber?, email: Domain.EmailAddress, photoUrl: Domain.Photo? ) -> Single<Domain.People> {
+    func getContact(people: Domain.People) -> Single<Domain.People> {
         return Single.create{
             single in
-            let name = name
-            let phone = phoneNumber
-            let email = email
-            let photo = photoUrl
-            let people = Domain.People(
-                names: [name],
-                phoneNumbers: [phone ?? Domain.PhoneNumber(value: "No number") ],
-                photos: [photo ?? Domain.Photo(url: "")],
-                emailAddresses: [email]
+            let contact = Domain.People(
+                names: people.names,
+                phoneNumbers: people.phoneNumbers
+                    ?? [Domain.PhoneNumber(value: "No number")],
+                photos: people.photos ?? [Domain.Photo(url: "")],
+                emailAddresses: people.emailAddresses
             )
-            single(.success(people))
+            single(.success(contact))
             return Disposables.create()
         }
     }
     
     func transform(input: Input) -> Output {
-        let people = self.getContact(
-            name: self.people.names[0],
-            phoneNumber: self.people.phoneNumbers?[0],
-            email: self.people.emailAddresses[0],
-            photoUrl: self.people.photos?[0]
-            )
+        let people = self.getContact( people: self.people)
         .asDriverOnErrorJustComplete()
         return Output(people: people)
     }

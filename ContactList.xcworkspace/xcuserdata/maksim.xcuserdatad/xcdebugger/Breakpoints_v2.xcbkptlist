@@ -688,8 +688,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "ContactViewModel"
-            landmarkType = "14">
+            landmarkName = "transform(input:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -983,22 +983,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A0F155C2-9550-49C3-AB37-A44A78A7DF7D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "transform(input:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7321B451-D884-48DC-86B7-64C44A5F7FA3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1022,8 +1006,8 @@
             filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1063,70 +1047,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "896C24DB-59D4-4A57-985C-242EF28B18A6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "transform(input:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "896C24DB-59D4-4A57-985C-242EF28B18A6 - 1ba7ce08464bced3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ContactList.LoginViewModel.transform(input: ContactList.LoginViewModel.Input) -&gt; ()"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "594">
-               </Location>
-               <Location
-                  uuid = "896C24DB-59D4-4A57-985C-242EF28B18A6 - 911d19e06dc73e11"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Bool) -&gt; () in ContactList.LoginViewModel.transform(input: ContactList.LoginViewModel.Input) -&gt; ()"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ED63CF32-0FD4-49B8-84E7-CF7BCAA7513C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "transform(input:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "29D5E49A-469B-4AFB-B351-FC9417E2BA39"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1134,8 +1054,8 @@
             filePath = "ContactList/Scenes/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "transform(input:)"
             landmarkType = "7">
             <Locations>
@@ -1175,118 +1095,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "12FD270C-BC9B-466E-9CF8-57062E97752B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "transform(input:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "12FD270C-BC9B-466E-9CF8-57062E97752B - 45c5639744957ec7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ContactList.RootViewModel.transform(input: ContactList.RootViewModel.Input) -&gt; ()"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "434">
-               </Location>
-               <Location
-                  uuid = "12FD270C-BC9B-466E-9CF8-57062E97752B - 9bda075aaec87366"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Bool) -&gt; () in ContactList.RootViewModel.transform(input: ContactList.RootViewModel.Input) -&gt; ()"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "86">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "71C4C983-8B89-4078-9DE3-B9F4F6555114"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "transform(input:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "71C4C983-8B89-4078-9DE3-B9F4F6555114 - 45c5639744957e89"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ContactList.RootViewModel.transform(input: ContactList.RootViewModel.Input) -&gt; ()"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "102">
-               </Location>
-               <Location
-                  uuid = "71C4C983-8B89-4078-9DE3-B9F4F6555114 - bff08a580f4c173f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (()) -&gt; RxCocoa.SharedSequence&lt;RxCocoa.DriverSharingStrategy, Swift.Bool&gt; in ContactList.RootViewModel.transform(input: ContactList.RootViewModel.Input) -&gt; ()"
-                  moduleName = "ContactList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksim/Desktop/65/ContactList/ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A798D15-9BE6-475E-801D-0E11DB8A0DA4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "transform(input:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "59668F67-020E-4542-A5E0-95CA2E5FE04C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1297,22 +1105,6 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E167A3D7-C38D-4E25-A9FD-244EC08592CF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ContactList/Scenes/Root/ViewModel/RootViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "transform(input:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -48,16 +48,24 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
               withError error: Error!) {
     }
     
-    public func getAccessToken() -> String? {
-        guard
-            let accesToken = GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken
-        else { return nil }
-        
-        return accesToken
-    }
-    
-    public func presentingViewController(vc: UIViewController) {
-        GIDSignIn.sharedInstance()?.presentingViewController = vc
+    public func getAccessToken() -> Single<Domain.TokenContainer> {
+            
+            return Single.create{
+                single in
+               
+                do{
+                    guard let accessToken =  GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken else {
+                        throw NSError()
+                    }
+                    
+                    single(.success(Domain.TokenContainer(token: accessToken)))
+
+                } catch let error{
+                    single(.failure(error))
+                }
+                
+                return Disposables.create ()
+            }
     }
     
     public func signOut() {

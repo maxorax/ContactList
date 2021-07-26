@@ -7,8 +7,6 @@ protocol LoginViewModelProtocol {
     associatedtype Input
     associatedtype Output
         
-    func presentingViewController(vc: UIViewController)
-    
     func openContactViewController()
     
     func transform(input: Input) 

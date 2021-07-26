@@ -17,26 +17,33 @@ class LoginViewModel: LoginViewModelProtocol {
         accessUseCase = container.accessUseCase
     }
     
-    func presentingViewController(vc: UIViewController) {
-        signInUseCase.presentingViewController(vc: vc)
-    }
-    
     func openContactViewController() { 
         router.openContactModule()
     }
     
     func transform(input: Input) {
         _ = input.signInTrigger
-            .flatMapLatest({ _  in
+            .flatMapLatest({ [weak self] _ -> Driver<Bool> in
+                guard let self = self else { return Driver.empty() }
+                
                 return self.signInUseCase
                     .signIn(vc: input.vc)
                     .asDriver(onErrorJustReturn: false)
+                    
             })
-            .drive(onNext:{ value in
-                guard value == true else {
-                    return
-                }
-                self.accessUseCase.storeToken(container: Domain.TokenContainer (token:  self.signInUseCase.getAccessToken()!))
+            .flatMapLatest({ [weak self] _ -> Driver<Domain.TokenContainer> in
+                guard let self = self else { return Driver.empty() }
+                
+                return self.signInUseCase.getAccessToken()
+                .asDriverOnErrorJustComplete()
+                    
+            })
+            .flatMapLatest({ [weak self] value -> Driver<Void> in
+                guard let self = self else { return Driver.empty() }
+                
+                return self.accessUseCase.storeToken(container:  value).asDriverOnErrorJustComplete()
+            })
+            .drive(onNext:{ _ in
                 self.openContactViewController()
             })
             .disposed(by: input.disposeBag)

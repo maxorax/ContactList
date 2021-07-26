@@ -26,22 +26,46 @@ class RootViewModel: RootViewModelProtocol {
     }
     
     func transform(input: Input) -> Output {
+        var isSucccess = false
         _ = input.viewTrigger
-            .flatMapLatest { _ in
+            .flatMapLatest { [weak self] _ -> Driver<Bool> in
+                guard let self = self else { return Driver.empty() }
+                
                 return self.signInUseCase.restore()
                     .trackError(self.errorTracker)
                     .asDriverOnErrorJustComplete()
             }
-            .drive(onNext:{ value in
+            .flatMapLatest { [weak self] value -> Driver<TokenContainer> in
+                guard
+                    let self = self
+                else { return Driver.empty() }
+                
+                isSucccess = value
                 guard value else {
-                    self.openLoginController()
-                    return
+                    return Driver.empty()
                 }
                 
-                self.accessUseCase.storeToken(container: Domain.TokenContainer (token:  self.signInUseCase.getAccessToken()!))
+                return self.signInUseCase.getAccessToken()
+                .asDriverOnErrorJustComplete()
+               
+            }
+            .flatMapLatest { [weak self] token in
+                guard let self = self else { return Driver.empty() }
+                
+                 return self.accessUseCase.storeToken(container:  token).asDriverOnErrorJustComplete()
+            }
+            .drive(onNext:{ [weak self] ()  in
+                guard let self = self else { return }
+        
+                guard isSucccess else {
+                    self.openLoginController()
+                    return
+                    }
+        
                 self.openConctactController()
             })
             .disposed(by: input.disposeBag)
+
         return Output(errorTracker: errorTracker)
     }
 }

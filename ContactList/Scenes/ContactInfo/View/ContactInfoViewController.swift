@@ -39,8 +39,12 @@ class ContactInfoViewController: UIViewController {
             .drive(onNext:{ people in
                 self.nameLabel.text = "Full name: \(people.names[0].displayName)"
                 self.phoneNumberLabel.text =
-                    "Phone number: \(people.phoneNumbers?[0].value ?? "No number")"
-                self.emailLabel.text = "Email: \(people.emailAddresses[0].value)"
+                    "Phone number: \(people.phoneNumbers?.map({$0.value}).joined(separator: ",\n\t\t\t\t  ") ?? "No number")"
+                self.phoneNumberLabel.numberOfLines = people.phoneNumbers?.count ?? 0
+                self.phoneNumberLabel.sizeToFit()
+                self.emailLabel.text = "Email: \(people.emailAddresses.map { $0.value }.joined(separator: ",\n\t\t"))"
+                self.emailLabel.numberOfLines = people.emailAddresses.count
+                self.emailLabel.sizeToFit()
                 guard let photoUrl = people.photos?[0].url else {
                     self.photoImageView.image = UIImage(named: "profile")
                     self.indicator.stopAnimating()

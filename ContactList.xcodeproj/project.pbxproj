@@ -22,26 +22,6 @@
 		B503E8782697AB2600F47E4D /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E8772697AB2600F47E4D /* LoginRoute.swift */; };
 		B503E87B2697AB6700F47E4D /* LoginTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E87A2697AB6700F47E4D /* LoginTransition.swift */; };
 		B529B6AA26A32566004EAFF4 /* PrimitiveSequenceType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5476C4A26A31E7900A73EAA /* PrimitiveSequenceType+Ext.swift */; };
-		B54A35AC26AEB122004A0F8D /* Peoples.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35A526AEB122004A0F8D /* Peoples.swift */; };
-		B54A35AD26AEB122004A0F8D /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35A626AEB122004A0F8D /* Name.swift */; };
-		B54A35AE26AEB122004A0F8D /* TokenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35A726AEB122004A0F8D /* TokenContainer.swift */; };
-		B54A35AF26AEB122004A0F8D /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35A826AEB122004A0F8D /* People.swift */; };
-		B54A35B026AEB122004A0F8D /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35A926AEB122004A0F8D /* PhoneNumber.swift */; };
-		B54A35B126AEB122004A0F8D /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35AA26AEB122004A0F8D /* EmailAddress.swift */; };
-		B54A35B226AEB122004A0F8D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35AB26AEB122004A0F8D /* Photo.swift */; };
-		B54A35BF26AEB14D004A0F8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35BE26AEB14D004A0F8D /* Constants.swift */; };
-		B54A35D326AEB1B2004A0F8D /* ContactUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35CB26AEB1B1004A0F8D /* ContactUseCaseProvider.swift */; };
-		B54A35D426AEB1B2004A0F8D /* ContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35CC26AEB1B1004A0F8D /* ContactUseCase.swift */; };
-		B54A35D526AEB1B2004A0F8D /* SignInUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35CE26AEB1B1004A0F8D /* SignInUseCaseProvider.swift */; };
-		B54A35D626AEB1B2004A0F8D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35CF26AEB1B1004A0F8D /* SignInUseCase.swift */; };
-		B54A35D726AEB1B2004A0F8D /* AccessUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35D126AEB1B2004A0F8D /* AccessUseCaseProvider.swift */; };
-		B54A35D826AEB1B2004A0F8D /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35D226AEB1B2004A0F8D /* AccessUseCase.swift */; };
-		B54A35E426AEB1CE004A0F8D /* ContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35E226AEB1CE004A0F8D /* ContactUseCase.swift */; };
-		B54A35E526AEB1CE004A0F8D /* ContactUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35E326AEB1CE004A0F8D /* ContactUseCaseProvider.swift */; };
-		B54A35F126AEB1D9004A0F8D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35EF26AEB1D9004A0F8D /* SignInUseCase.swift */; };
-		B54A35F226AEB1D9004A0F8D /* SignInUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35F026AEB1D9004A0F8D /* SignInUseCaseProvider.swift */; };
-		B54A35FE26AEB1E3004A0F8D /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35FC26AEB1E3004A0F8D /* AccessUseCase.swift */; };
-		B54A35FF26AEB1E3004A0F8D /* AccessUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A35FD26AEB1E3004A0F8D /* AccessUseCaseProvider.swift */; };
 		B54A361926AEB2E0004A0F8D /* Pods_StoragePlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A361826AEB2E0004A0F8D /* Pods_StoragePlatform.framework */; };
 		B54D50242685B0790069884F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D50222685B0790069884F /* RootViewController.swift */; };
 		B54D50252685B0790069884F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54D50232685B0790069884F /* RootViewController.xib */; };
@@ -77,6 +57,26 @@
 		B58E0D6326AEAD6200626403 /* StoragePlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58E0D5A26AEAD6100626403 /* StoragePlatform.framework */; platformFilter = ios; };
 		B58E0D6A26AEAD6200626403 /* StoragePlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E0D6926AEAD6200626403 /* StoragePlatformTests.swift */; };
 		B58E0D6C26AEAD6200626403 /* StoragePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = B58E0D5C26AEAD6100626403 /* StoragePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B592E75E26AEB664006CAE3E /* SignInUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E74B26AEB664006CAE3E /* SignInUseCaseProvider.swift */; };
+		B592E75F26AEB664006CAE3E /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E74C26AEB664006CAE3E /* SignInUseCase.swift */; };
+		B592E76026AEB664006CAE3E /* AccessUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E74E26AEB664006CAE3E /* AccessUseCaseProvider.swift */; };
+		B592E76126AEB664006CAE3E /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E74F26AEB664006CAE3E /* AccessUseCase.swift */; };
+		B592E76226AEB664006CAE3E /* ContactUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75126AEB664006CAE3E /* ContactUseCaseProvider.swift */; };
+		B592E76326AEB664006CAE3E /* ContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75226AEB664006CAE3E /* ContactUseCase.swift */; };
+		B592E76426AEB664006CAE3E /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75426AEB664006CAE3E /* PhoneNumber.swift */; };
+		B592E76526AEB664006CAE3E /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75526AEB664006CAE3E /* EmailAddress.swift */; };
+		B592E76626AEB664006CAE3E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75626AEB664006CAE3E /* Photo.swift */; };
+		B592E76726AEB664006CAE3E /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75726AEB664006CAE3E /* Name.swift */; };
+		B592E76826AEB664006CAE3E /* TokenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75826AEB664006CAE3E /* TokenContainer.swift */; };
+		B592E76926AEB664006CAE3E /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75926AEB664006CAE3E /* People.swift */; };
+		B592E76A26AEB664006CAE3E /* Peoples.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75A26AEB664006CAE3E /* Peoples.swift */; };
+		B592E76B26AEB664006CAE3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E75D26AEB664006CAE3E /* Constants.swift */; };
+		B592E78926AEB682006CAE3E /* ContactUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E78726AEB682006CAE3E /* ContactUseCaseProvider.swift */; };
+		B592E78A26AEB682006CAE3E /* ContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E78826AEB682006CAE3E /* ContactUseCase.swift */; };
+		B592E7A826AEB69D006CAE3E /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E7A626AEB69D006CAE3E /* SignInUseCase.swift */; };
+		B592E7A926AEB69D006CAE3E /* SignInUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E7A726AEB69D006CAE3E /* SignInUseCaseProvider.swift */; };
+		B592E7C726AEB6B9006CAE3E /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E7C526AEB6B9006CAE3E /* AccessUseCase.swift */; };
+		B592E7C826AEB6BA006CAE3E /* AccessUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592E7C626AEB6B9006CAE3E /* AccessUseCaseProvider.swift */; };
 		B5942714269F017000D7E14C /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5942713269F017000D7E14C /* Observable+Ext.swift */; };
 		B5942717269F017600D7E14C /* SharedSequence+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5942716269F017600D7E14C /* SharedSequence+Ext.swift */; };
 		B5A25C8E26A1ABA200C96236 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A25C8D26A1ABA100C96236 /* ErrorTracker.swift */; };
@@ -220,26 +220,6 @@
 		B503E8772697AB2600F47E4D /* LoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
 		B503E87A2697AB6700F47E4D /* LoginTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransition.swift; sourceTree = "<group>"; };
 		B5476C4A26A31E7900A73EAA /* PrimitiveSequenceType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequenceType+Ext.swift"; path = "Rx/PrimitiveSequenceType+Ext.swift"; sourceTree = "<group>"; };
-		B54A35A526AEB122004A0F8D /* Peoples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Peoples.swift; path = Domain/Models/Peoples.swift; sourceTree = SOURCE_ROOT; };
-		B54A35A626AEB122004A0F8D /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Name.swift; path = Domain/Models/Name.swift; sourceTree = SOURCE_ROOT; };
-		B54A35A726AEB122004A0F8D /* TokenContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenContainer.swift; path = Domain/Models/TokenContainer.swift; sourceTree = SOURCE_ROOT; };
-		B54A35A826AEB122004A0F8D /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Domain/Models/People.swift; sourceTree = SOURCE_ROOT; };
-		B54A35A926AEB122004A0F8D /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = Domain/Models/PhoneNumber.swift; sourceTree = SOURCE_ROOT; };
-		B54A35AA26AEB122004A0F8D /* EmailAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailAddress.swift; path = Domain/Models/EmailAddress.swift; sourceTree = SOURCE_ROOT; };
-		B54A35AB26AEB122004A0F8D /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Domain/Models/Photo.swift; sourceTree = SOURCE_ROOT; };
-		B54A35BE26AEB14D004A0F8D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Domain/Shared/Constants/Constants.swift; sourceTree = SOURCE_ROOT; };
-		B54A35CB26AEB1B1004A0F8D /* ContactUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCaseProvider.swift; sourceTree = "<group>"; };
-		B54A35CC26AEB1B1004A0F8D /* ContactUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCase.swift; sourceTree = "<group>"; };
-		B54A35CE26AEB1B1004A0F8D /* SignInUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCaseProvider.swift; sourceTree = "<group>"; };
-		B54A35CF26AEB1B1004A0F8D /* SignInUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
-		B54A35D126AEB1B2004A0F8D /* AccessUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCaseProvider.swift; sourceTree = "<group>"; };
-		B54A35D226AEB1B2004A0F8D /* AccessUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
-		B54A35E226AEB1CE004A0F8D /* ContactUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCase.swift; sourceTree = "<group>"; };
-		B54A35E326AEB1CE004A0F8D /* ContactUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCaseProvider.swift; sourceTree = "<group>"; };
-		B54A35EF26AEB1D9004A0F8D /* SignInUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
-		B54A35F026AEB1D9004A0F8D /* SignInUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCaseProvider.swift; sourceTree = "<group>"; };
-		B54A35FC26AEB1E3004A0F8D /* AccessUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
-		B54A35FD26AEB1E3004A0F8D /* AccessUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCaseProvider.swift; sourceTree = "<group>"; };
 		B54A361826AEB2E0004A0F8D /* Pods_StoragePlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_StoragePlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54D50222685B0790069884F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B54D50232685B0790069884F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -289,6 +269,26 @@
 		B58E0D6226AEAD6200626403 /* StoragePlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoragePlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58E0D6926AEAD6200626403 /* StoragePlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragePlatformTests.swift; sourceTree = "<group>"; };
 		B58E0D6B26AEAD6200626403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B592E74B26AEB664006CAE3E /* SignInUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCaseProvider.swift; sourceTree = "<group>"; };
+		B592E74C26AEB664006CAE3E /* SignInUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
+		B592E74E26AEB664006CAE3E /* AccessUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCaseProvider.swift; sourceTree = "<group>"; };
+		B592E74F26AEB664006CAE3E /* AccessUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
+		B592E75126AEB664006CAE3E /* ContactUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCaseProvider.swift; sourceTree = "<group>"; };
+		B592E75226AEB664006CAE3E /* ContactUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCase.swift; sourceTree = "<group>"; };
+		B592E75426AEB664006CAE3E /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		B592E75526AEB664006CAE3E /* EmailAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
+		B592E75626AEB664006CAE3E /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B592E75726AEB664006CAE3E /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		B592E75826AEB664006CAE3E /* TokenContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenContainer.swift; sourceTree = "<group>"; };
+		B592E75926AEB664006CAE3E /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		B592E75A26AEB664006CAE3E /* Peoples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peoples.swift; sourceTree = "<group>"; };
+		B592E75D26AEB664006CAE3E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B592E78726AEB682006CAE3E /* ContactUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCaseProvider.swift; sourceTree = "<group>"; };
+		B592E78826AEB682006CAE3E /* ContactUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUseCase.swift; sourceTree = "<group>"; };
+		B592E7A626AEB69D006CAE3E /* SignInUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
+		B592E7A726AEB69D006CAE3E /* SignInUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUseCaseProvider.swift; sourceTree = "<group>"; };
+		B592E7C526AEB6B9006CAE3E /* AccessUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
+		B592E7C626AEB6B9006CAE3E /* AccessUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessUseCaseProvider.swift; sourceTree = "<group>"; };
 		B5942713269F017000D7E14C /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		B5942716269F017600D7E14C /* SharedSequence+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SharedSequence+Ext.swift"; sourceTree = "<group>"; };
 		B5A25C8D26A1ABA100C96236 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
@@ -440,73 +440,6 @@
 				B5029C21268DABEC0073E9A8 /* Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		B54A35A426AEB10A004A0F8D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B54A35AA26AEB122004A0F8D /* EmailAddress.swift */,
-				B54A35A626AEB122004A0F8D /* Name.swift */,
-				B54A35A826AEB122004A0F8D /* People.swift */,
-				B54A35A526AEB122004A0F8D /* Peoples.swift */,
-				B54A35A926AEB122004A0F8D /* PhoneNumber.swift */,
-				B54A35AB26AEB122004A0F8D /* Photo.swift */,
-				B54A35A726AEB122004A0F8D /* TokenContainer.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B54A35BC26AEB132004A0F8D /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				B54A35BD26AEB13E004A0F8D /* Constants */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		B54A35BD26AEB13E004A0F8D /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				B54A35BE26AEB14D004A0F8D /* Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		B54A35C926AEB189004A0F8D /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				B54A35D026AEB1B2004A0F8D /* AccessUseCase */,
-				B54A35CA26AEB1B1004A0F8D /* ContactUseCase */,
-				B54A35CD26AEB1B1004A0F8D /* SignInUseCase */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		B54A35CA26AEB1B1004A0F8D /* ContactUseCase */ = {
-			isa = PBXGroup;
-			children = (
-				B54A35CB26AEB1B1004A0F8D /* ContactUseCaseProvider.swift */,
-				B54A35CC26AEB1B1004A0F8D /* ContactUseCase.swift */,
-			);
-			path = ContactUseCase;
-			sourceTree = "<group>";
-		};
-		B54A35CD26AEB1B1004A0F8D /* SignInUseCase */ = {
-			isa = PBXGroup;
-			children = (
-				B54A35CE26AEB1B1004A0F8D /* SignInUseCaseProvider.swift */,
-				B54A35CF26AEB1B1004A0F8D /* SignInUseCase.swift */,
-			);
-			path = SignInUseCase;
-			sourceTree = "<group>";
-		};
-		B54A35D026AEB1B2004A0F8D /* AccessUseCase */ = {
-			isa = PBXGroup;
-			children = (
-				B54A35D126AEB1B2004A0F8D /* AccessUseCaseProvider.swift */,
-				B54A35D226AEB1B2004A0F8D /* AccessUseCase.swift */,
-			);
-			path = AccessUseCase;
 			sourceTree = "<group>";
 		};
 		B5595C51268DCF5800A3B4BA /* ViewModel */ = {
@@ -674,9 +607,9 @@
 		B58E0CDE26AEACD100626403 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				B54A35C926AEB189004A0F8D /* UseCase */,
-				B54A35BC26AEB132004A0F8D /* Shared */,
-				B54A35A426AEB10A004A0F8D /* Models */,
+				B592E75326AEB664006CAE3E /* Models */,
+				B592E75B26AEB664006CAE3E /* Shared */,
+				B592E74926AEB664006CAE3E /* UseCase */,
 				B58E0CDF26AEACD100626403 /* Domain.h */,
 				B58E0CE026AEACD100626403 /* Info.plist */,
 			);
@@ -695,8 +628,8 @@
 		B58E0D0226AEAD0F00626403 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				B54A35E226AEB1CE004A0F8D /* ContactUseCase.swift */,
-				B54A35E326AEB1CE004A0F8D /* ContactUseCaseProvider.swift */,
+				B592E78826AEB682006CAE3E /* ContactUseCase.swift */,
+				B592E78726AEB682006CAE3E /* ContactUseCaseProvider.swift */,
 				B58E0D0326AEAD0F00626403 /* NetworkPlatform.h */,
 				B58E0D0426AEAD0F00626403 /* Info.plist */,
 			);
@@ -715,8 +648,8 @@
 		B58E0D2D26AEAD4100626403 /* SignInPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				B54A35EF26AEB1D9004A0F8D /* SignInUseCase.swift */,
-				B54A35F026AEB1D9004A0F8D /* SignInUseCaseProvider.swift */,
+				B592E7A626AEB69D006CAE3E /* SignInUseCase.swift */,
+				B592E7A726AEB69D006CAE3E /* SignInUseCaseProvider.swift */,
 				B58E0D2E26AEAD4100626403 /* SignInPlatform.h */,
 				B58E0D2F26AEAD4200626403 /* Info.plist */,
 			);
@@ -735,8 +668,8 @@
 		B58E0D5B26AEAD6100626403 /* StoragePlatform */ = {
 			isa = PBXGroup;
 			children = (
-				B54A35FC26AEB1E3004A0F8D /* AccessUseCase.swift */,
-				B54A35FD26AEB1E3004A0F8D /* AccessUseCaseProvider.swift */,
+				B592E7C526AEB6B9006CAE3E /* AccessUseCase.swift */,
+				B592E7C626AEB6B9006CAE3E /* AccessUseCaseProvider.swift */,
 				B58E0D5C26AEAD6100626403 /* StoragePlatform.h */,
 				B58E0D5D26AEAD6100626403 /* Info.plist */,
 			);
@@ -750,6 +683,73 @@
 				B58E0D6B26AEAD6200626403 /* Info.plist */,
 			);
 			path = StoragePlatformTests;
+			sourceTree = "<group>";
+		};
+		B592E74926AEB664006CAE3E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B592E74A26AEB664006CAE3E /* SignInUseCase */,
+				B592E74D26AEB664006CAE3E /* AccessUseCase */,
+				B592E75026AEB664006CAE3E /* ContactUseCase */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B592E74A26AEB664006CAE3E /* SignInUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B592E74B26AEB664006CAE3E /* SignInUseCaseProvider.swift */,
+				B592E74C26AEB664006CAE3E /* SignInUseCase.swift */,
+			);
+			path = SignInUseCase;
+			sourceTree = "<group>";
+		};
+		B592E74D26AEB664006CAE3E /* AccessUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B592E74E26AEB664006CAE3E /* AccessUseCaseProvider.swift */,
+				B592E74F26AEB664006CAE3E /* AccessUseCase.swift */,
+			);
+			path = AccessUseCase;
+			sourceTree = "<group>";
+		};
+		B592E75026AEB664006CAE3E /* ContactUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B592E75126AEB664006CAE3E /* ContactUseCaseProvider.swift */,
+				B592E75226AEB664006CAE3E /* ContactUseCase.swift */,
+			);
+			path = ContactUseCase;
+			sourceTree = "<group>";
+		};
+		B592E75326AEB664006CAE3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B592E75426AEB664006CAE3E /* PhoneNumber.swift */,
+				B592E75526AEB664006CAE3E /* EmailAddress.swift */,
+				B592E75626AEB664006CAE3E /* Photo.swift */,
+				B592E75726AEB664006CAE3E /* Name.swift */,
+				B592E75826AEB664006CAE3E /* TokenContainer.swift */,
+				B592E75926AEB664006CAE3E /* People.swift */,
+				B592E75A26AEB664006CAE3E /* Peoples.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B592E75B26AEB664006CAE3E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B592E75C26AEB664006CAE3E /* Constants */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B592E75C26AEB664006CAE3E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B592E75D26AEB664006CAE3E /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		B5A59B322694996700C25076 /* ViewModel */ = {
@@ -1429,20 +1429,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B54A35D526AEB1B2004A0F8D /* SignInUseCaseProvider.swift in Sources */,
-				B54A35D726AEB1B2004A0F8D /* AccessUseCaseProvider.swift in Sources */,
-				B54A35B226AEB122004A0F8D /* Photo.swift in Sources */,
-				B54A35AF26AEB122004A0F8D /* People.swift in Sources */,
-				B54A35AD26AEB122004A0F8D /* Name.swift in Sources */,
-				B54A35AC26AEB122004A0F8D /* Peoples.swift in Sources */,
-				B54A35B126AEB122004A0F8D /* EmailAddress.swift in Sources */,
-				B54A35D826AEB1B2004A0F8D /* AccessUseCase.swift in Sources */,
-				B54A35B026AEB122004A0F8D /* PhoneNumber.swift in Sources */,
-				B54A35AE26AEB122004A0F8D /* TokenContainer.swift in Sources */,
-				B54A35D326AEB1B2004A0F8D /* ContactUseCaseProvider.swift in Sources */,
-				B54A35D426AEB1B2004A0F8D /* ContactUseCase.swift in Sources */,
-				B54A35BF26AEB14D004A0F8D /* Constants.swift in Sources */,
-				B54A35D626AEB1B2004A0F8D /* SignInUseCase.swift in Sources */,
+				B592E76026AEB664006CAE3E /* AccessUseCaseProvider.swift in Sources */,
+				B592E76426AEB664006CAE3E /* PhoneNumber.swift in Sources */,
+				B592E76126AEB664006CAE3E /* AccessUseCase.swift in Sources */,
+				B592E76626AEB664006CAE3E /* Photo.swift in Sources */,
+				B592E76926AEB664006CAE3E /* People.swift in Sources */,
+				B592E76726AEB664006CAE3E /* Name.swift in Sources */,
+				B592E76826AEB664006CAE3E /* TokenContainer.swift in Sources */,
+				B592E76526AEB664006CAE3E /* EmailAddress.swift in Sources */,
+				B592E75E26AEB664006CAE3E /* SignInUseCaseProvider.swift in Sources */,
+				B592E76A26AEB664006CAE3E /* Peoples.swift in Sources */,
+				B592E76226AEB664006CAE3E /* ContactUseCaseProvider.swift in Sources */,
+				B592E76B26AEB664006CAE3E /* Constants.swift in Sources */,
+				B592E76326AEB664006CAE3E /* ContactUseCase.swift in Sources */,
+				B592E75F26AEB664006CAE3E /* SignInUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1458,8 +1458,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B54A35E426AEB1CE004A0F8D /* ContactUseCase.swift in Sources */,
-				B54A35E526AEB1CE004A0F8D /* ContactUseCaseProvider.swift in Sources */,
+				B592E78A26AEB682006CAE3E /* ContactUseCase.swift in Sources */,
+				B592E78926AEB682006CAE3E /* ContactUseCaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1475,8 +1475,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B54A35F226AEB1D9004A0F8D /* SignInUseCaseProvider.swift in Sources */,
-				B54A35F126AEB1D9004A0F8D /* SignInUseCase.swift in Sources */,
+				B592E7A926AEB69D006CAE3E /* SignInUseCaseProvider.swift in Sources */,
+				B592E7A826AEB69D006CAE3E /* SignInUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1492,8 +1492,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B54A35FF26AEB1E3004A0F8D /* AccessUseCaseProvider.swift in Sources */,
-				B54A35FE26AEB1E3004A0F8D /* AccessUseCase.swift in Sources */,
+				B592E7C826AEB6BA006CAE3E /* AccessUseCaseProvider.swift in Sources */,
+				B592E7C726AEB6B9006CAE3E /* AccessUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

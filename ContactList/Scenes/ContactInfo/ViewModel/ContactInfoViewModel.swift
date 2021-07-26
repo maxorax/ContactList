@@ -2,7 +2,6 @@ import Foundation
 import RxCocoa
 import RxSwift
 import Domain
-import NetworkPlatform
 
 class ContactInfoViewModel: ContactInfoViewModelProtocol {
     

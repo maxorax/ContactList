@@ -3,16 +3,18 @@ import UIKit.UIViewController
 import RxSwift
 import RxCocoa
 import Domain
-import SignInPlatform
 
 class LoginViewModel: LoginViewModelProtocol {
   
     private let signInUseCase: Domain.SignInUseCase
+    private let accessUseCase: Domain.AccessUseCase
+
     private let router: LoginRouter.Routes
     
     init(container: Container) {
         router = container.router
         signInUseCase = container.signInUseCase
+        accessUseCase = container.accessUseCase
     }
     
     func presentingViewController(vc: UIViewController) {
@@ -34,7 +36,7 @@ class LoginViewModel: LoginViewModelProtocol {
                 guard value == true else {
                     return
                 }
-            
+                self.accessUseCase.storeToken(container: Domain.TokenContainer (token:  self.signInUseCase.getAccessToken()!))
                 self.openContactViewController()
             })
             .disposed(by: input.disposeBag)
@@ -45,6 +47,7 @@ extension LoginViewModel {
     struct Container{
         let router: LoginRouter
         let signInUseCase: Domain.SignInUseCase
+        let accessUseCase: Domain.AccessUseCase
     }
     struct Input {
         var signInTrigger: Driver<Void>

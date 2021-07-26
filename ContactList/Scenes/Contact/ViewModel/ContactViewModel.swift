@@ -2,8 +2,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Domain
-import NetworkPlatform
-import SignInPlatform
 
 struct ContactViewModel: ContactViewModelProtocol {
     

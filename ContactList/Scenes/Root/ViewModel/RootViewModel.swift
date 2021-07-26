@@ -2,7 +2,6 @@ import Foundation
 import RxCocoa
 import RxSwift
 import Domain
-import SignInPlatform
 
 class RootViewModel: RootViewModelProtocol {
     
@@ -41,7 +40,6 @@ class RootViewModel: RootViewModelProtocol {
                 
                 self.accessUseCase.storeToken(container: Domain.TokenContainer (token:  self.signInUseCase.getAccessToken()!))
                 self.openConctactController()
-                //value ? self.openConctactController() : self.openLoginController()
             })
             .disposed(by: input.disposeBag)
         return Output(errorTracker: errorTracker)

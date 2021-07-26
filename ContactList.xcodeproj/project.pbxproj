@@ -92,6 +92,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B5305D9B26AEB8390031BBA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B570C1952682008D00F020A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B58E0CDC26AEACD100626403;
+			remoteInfo = Domain;
+		};
+		B5305D9D26AEB83D0031BBA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B570C1952682008D00F020A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B58E0CDC26AEACD100626403;
+			remoteInfo = Domain;
+		};
 		B54A358526AEAED1004A0F8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B570C1952682008D00F020A8 /* Project object */;
@@ -948,6 +962,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B5305D9C26AEB8390031BBA0 /* PBXTargetDependency */,
 			);
 			name = NetworkPlatform;
 			productName = NetworkPlatform;
@@ -987,6 +1002,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B5305D9E26AEB83D0031BBA0 /* PBXTargetDependency */,
 			);
 			name = SignInPlatform;
 			productName = SignInPlatform;
@@ -1508,6 +1524,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B5305D9C26AEB8390031BBA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B58E0CDC26AEACD100626403 /* Domain */;
+			targetProxy = B5305D9B26AEB8390031BBA0 /* PBXContainerItemProxy */;
+		};
+		B5305D9E26AEB83D0031BBA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B58E0CDC26AEACD100626403 /* Domain */;
+			targetProxy = B5305D9D26AEB83D0031BBA0 /* PBXContainerItemProxy */;
+		};
 		B54A358626AEAED1004A0F8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B58E0CDC26AEACD100626403 /* Domain */;

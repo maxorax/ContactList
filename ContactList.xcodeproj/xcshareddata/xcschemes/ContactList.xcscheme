@@ -28,6 +28,46 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B58E0CE426AEACD100626403"
+               BuildableName = "DomainTests.xctest"
+               BlueprintName = "DomainTests"
+               ReferencedContainer = "container:ContactList.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B58E0D0826AEAD0F00626403"
+               BuildableName = "NetworkPlatformTests.xctest"
+               BlueprintName = "NetworkPlatformTests"
+               ReferencedContainer = "container:ContactList.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B58E0D3326AEAD4200626403"
+               BuildableName = "SignInPlatformTests.xctest"
+               BlueprintName = "SignInPlatformTests"
+               ReferencedContainer = "container:ContactList.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B58E0D6126AEAD6200626403"
+               BuildableName = "StoragePlatformTests.xctest"
+               BlueprintName = "StoragePlatformTests"
+               ReferencedContainer = "container:ContactList.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

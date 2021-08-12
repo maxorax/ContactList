@@ -8,6 +8,7 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
     
     public var isSuccess: PublishSubject<Bool> = PublishSubject()
     
+    
     public override init() {
         super.init()
 
@@ -48,7 +49,7 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
               withError error: Error!) {
     }
     
-    public func getAccessToken() -> Single<Domain.TokenContainer> {
+    public func getAccessToken() -> Single<Domain.TokenContainer?> {
             
             return Single.create{
                 single in
@@ -66,6 +67,7 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
                 
                 return Disposables.create ()
             }
+        
     }
     
     public func signOut() {

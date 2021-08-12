@@ -26,7 +26,7 @@ class RootViewModel: RootViewModelProtocol {
     }
     
     func transform(input: Input) -> Output {
-        var isSucccess = false
+        var isSuccess = false
         _ = input.viewTrigger
             .flatMapLatest { [weak self] _ -> Driver<Bool> in
                 guard let self = self else { return Driver.empty() }
@@ -35,39 +35,44 @@ class RootViewModel: RootViewModelProtocol {
                     .trackError(self.errorTracker)
                     .asDriverOnErrorJustComplete()
             }
-            .flatMapLatest { [weak self] value -> Driver<TokenContainer> in
-                guard
-                    let self = self
-                else { return Driver.empty() }
+            .flatMapLatest { [weak self] value -> Driver<Domain.TokenContainer?> in
+                guard let self = self else { return Driver.empty() }
                 
-                isSucccess = value
+                isSuccess = value
                 guard value else {
-                    return Driver.empty()
+                    return Driver.just(nil)
                 }
                 
                 return self.signInUseCase.getAccessToken()
-                .asDriverOnErrorJustComplete()
-               
+                    .trackError(self.errorTracker)
+                    .asDriverOnErrorJustComplete()
             }
             .flatMapLatest { [weak self] token in
                 guard let self = self else { return Driver.empty() }
                 
-                 return self.accessUseCase.storeToken(container:  token).asDriverOnErrorJustComplete()
+                guard let accesstoken = token else {
+                    return Driver.just(())
+                }
+                
+                return self.accessUseCase.storeToken(container:  accesstoken)
+                    .trackError(self.errorTracker)
+                    .asDriverOnErrorJustComplete()
             }
             .drive(onNext:{ [weak self] ()  in
                 guard let self = self else { return }
-        
-                guard isSucccess else {
+                
+                guard isSuccess else {
                     self.openLoginController()
                     return
-                    }
+                }
         
-                self.openConctactController()
+               self.openConctactController()
             })
             .disposed(by: input.disposeBag)
-
+        
         return Output(errorTracker: errorTracker)
     }
+    
 }
 
 extension RootViewModel {

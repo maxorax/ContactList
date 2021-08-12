@@ -31,17 +31,20 @@ class LoginViewModel: LoginViewModelProtocol {
                     .asDriver(onErrorJustReturn: false)
                     
             })
-            .flatMapLatest({ [weak self] _ -> Driver<Domain.TokenContainer> in
+            .flatMapLatest({ [weak self] _ -> Driver<Domain.TokenContainer?> in
                 guard let self = self else { return Driver.empty() }
                 
                 return self.signInUseCase.getAccessToken()
                 .asDriverOnErrorJustComplete()
-                    
             })
-            .flatMapLatest({ [weak self] value -> Driver<Void> in
+            .flatMapLatest({ [weak self] token -> Driver<Void> in
                 guard let self = self else { return Driver.empty() }
                 
-                return self.accessUseCase.storeToken(container:  value).asDriverOnErrorJustComplete()
+                guard let accessToken = token else {
+                    return Driver.just(())
+                }
+                
+                return self.accessUseCase.storeToken(container:  accessToken).asDriverOnErrorJustComplete()
             })
             .drive(onNext:{ _ in
                 self.openContactViewController()

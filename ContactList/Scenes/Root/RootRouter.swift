@@ -1,5 +1,5 @@
 import UIKit
 
 final class RootRouter: Router<RootViewController>, RootRouter.Routes {
-    typealias Routes = LoginRoute & ContactRoute
+    typealias Routes = LoginRoute & ContactRoute & NotConnectionRoute
 }

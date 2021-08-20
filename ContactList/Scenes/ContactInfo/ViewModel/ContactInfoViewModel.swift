@@ -8,6 +8,8 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
     private let contactUseCase: Domain.ContactUseCase
     private var people: Domain.People
     private let router: ContactInfoRouter.Routes
+    private let errorTracker: ErrorTracker = ErrorTracker()
+
     
     init(container: Container) {
         router = container.router
@@ -33,12 +35,14 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
     
     func transform(input: Input) -> Output {
         let people = self.getContact( people: self.people)
-        .asDriverOnErrorJustComplete()
-        return Output(people: people)
+            .trackError(errorTracker)
+            .asDriverOnErrorJustComplete()
+        return Output(people: people, errorTracker: errorTracker)
     }
     
     func downloadImage(url: String) -> Driver<Data> {
         return contactUseCase.getPhoto(photoUrl: url)
+            .trackError(errorTracker)
             .asDriverOnErrorJustComplete()
     }
     
@@ -55,6 +59,7 @@ extension ContactInfoViewModel {
     }
     struct Output {
         var people: Driver<Domain.People>
+        var errorTracker: ErrorTracker
     }
 }
 

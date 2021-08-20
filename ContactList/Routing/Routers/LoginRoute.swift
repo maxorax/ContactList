@@ -6,7 +6,7 @@ protocol LoginRoute {
 
 extension LoginRoute where Self: RouterProtocol {
     func openLoginModule() {
-        let transition = LoginTransition()
+        let transition = RootTransition()
         let module = LoginModule(transition: transition)
         open(module.viewController, transition: transition)
     }

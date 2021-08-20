@@ -25,6 +25,10 @@ class RootViewModel: RootViewModelProtocol {
         router.openLoginModule()
     }
     
+    func openNotConnectionController() {
+        router.openNotConnectionModule()
+    }
+    
     func transform(input: Input) -> Output {
         var isSuccess = false
         _ = input.viewTrigger

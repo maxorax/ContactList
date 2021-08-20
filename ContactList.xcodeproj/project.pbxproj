@@ -20,7 +20,15 @@
 		B503E8722697AAF100F47E4D /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E8712697AAF100F47E4D /* LoginModule.swift */; };
 		B503E8752697AB0600F47E4D /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E8742697AB0600F47E4D /* LoginRouter.swift */; };
 		B503E8782697AB2600F47E4D /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E8772697AB2600F47E4D /* LoginRoute.swift */; };
-		B503E87B2697AB6700F47E4D /* LoginTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E87A2697AB6700F47E4D /* LoginTransition.swift */; };
+		B503E87B2697AB6700F47E4D /* RootTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E87A2697AB6700F47E4D /* RootTransition.swift */; };
+		B5079BBF26CFAE8C001D01E1 /* NotConnectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5079BBE26CFAE8C001D01E1 /* NotConnectionRouter.swift */; };
+		B5079BCA26CFAEAD001D01E1 /* NotConnectionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5079BC926CFAEAD001D01E1 /* NotConnectionModule.swift */; };
+		B5079BD526CFAED3001D01E1 /* NotConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5079BD426CFAED3001D01E1 /* NotConnectionViewModel.swift */; };
+		B5079BE026CFAEE5001D01E1 /* NotConnectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5079BDF26CFAEE5001D01E1 /* NotConnectionViewModelProtocol.swift */; };
+		B5079BEC26CFAF2B001D01E1 /* NotConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5079BEA26CFAF2B001D01E1 /* NotConnectionViewController.swift */; };
+		B5079BED26CFAF2B001D01E1 /* NotConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5079BEB26CFAF2B001D01E1 /* NotConnectionViewController.xib */; };
+		B5079BF826CFB595001D01E1 /* NotConnectionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5079BF726CFB595001D01E1 /* NotConnectionRoute.swift */; };
+		B5079C0326CFB5A5001D01E1 /* RootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5079C0226CFB5A5001D01E1 /* RootRoute.swift */; };
 		B529B6AA26A32566004EAFF4 /* PrimitiveSequenceType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5476C4A26A31E7900A73EAA /* PrimitiveSequenceType+Ext.swift */; };
 		B54A361926AEB2E0004A0F8D /* Pods_StoragePlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A361826AEB2E0004A0F8D /* Pods_StoragePlatform.framework */; };
 		B54D50242685B0790069884F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D50222685B0790069884F /* RootViewController.swift */; };
@@ -232,7 +240,15 @@
 		B503E8712697AAF100F47E4D /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
 		B503E8742697AB0600F47E4D /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		B503E8772697AB2600F47E4D /* LoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
-		B503E87A2697AB6700F47E4D /* LoginTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransition.swift; sourceTree = "<group>"; };
+		B503E87A2697AB6700F47E4D /* RootTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTransition.swift; sourceTree = "<group>"; };
+		B5079BBE26CFAE8C001D01E1 /* NotConnectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotConnectionRouter.swift; sourceTree = "<group>"; };
+		B5079BC926CFAEAD001D01E1 /* NotConnectionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotConnectionModule.swift; sourceTree = "<group>"; };
+		B5079BD426CFAED3001D01E1 /* NotConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotConnectionViewModel.swift; sourceTree = "<group>"; };
+		B5079BDF26CFAEE5001D01E1 /* NotConnectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotConnectionViewModelProtocol.swift; sourceTree = "<group>"; };
+		B5079BEA26CFAF2B001D01E1 /* NotConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotConnectionViewController.swift; sourceTree = "<group>"; };
+		B5079BEB26CFAF2B001D01E1 /* NotConnectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotConnectionViewController.xib; sourceTree = "<group>"; };
+		B5079BF726CFB595001D01E1 /* NotConnectionRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotConnectionRoute.swift; sourceTree = "<group>"; };
+		B5079C0226CFB5A5001D01E1 /* RootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoute.swift; sourceTree = "<group>"; };
 		B5476C4A26A31E7900A73EAA /* PrimitiveSequenceType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequenceType+Ext.swift"; path = "Rx/PrimitiveSequenceType+Ext.swift"; sourceTree = "<group>"; };
 		B54A361826AEB2E0004A0F8D /* Pods_StoragePlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_StoragePlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54D50222685B0790069884F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +448,7 @@
 		B5029C1E268DA6980073E9A8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B5079BB226CFAE27001D01E1 /* NotConnection */,
 				B5B9C890268C9B1F00D5E28F /* Contact */,
 				B5B9C88F268C9AF200D5E28F /* ContactInfo */,
 				B5B9C88E268C9AD700D5E28F /* Login */,
@@ -454,6 +471,35 @@
 				B5029C21268DABEC0073E9A8 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B5079BB226CFAE27001D01E1 /* NotConnection */ = {
+			isa = PBXGroup;
+			children = (
+				B5079BBD26CFAE58001D01E1 /* View */,
+				B5079BBC26CFAE4B001D01E1 /* ViewModel */,
+				B5079BBE26CFAE8C001D01E1 /* NotConnectionRouter.swift */,
+				B5079BC926CFAEAD001D01E1 /* NotConnectionModule.swift */,
+			);
+			path = NotConnection;
+			sourceTree = "<group>";
+		};
+		B5079BBC26CFAE4B001D01E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5079BD426CFAED3001D01E1 /* NotConnectionViewModel.swift */,
+				B5079BDF26CFAEE5001D01E1 /* NotConnectionViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B5079BBD26CFAE58001D01E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5079BEA26CFAF2B001D01E1 /* NotConnectionViewController.swift */,
+				B5079BEB26CFAF2B001D01E1 /* NotConnectionViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5595C51268DCF5800A3B4BA /* ViewModel */ = {
@@ -604,6 +650,8 @@
 				B589E2102697067F003B3B79 /* ContactInfoRoute.swift */,
 				B503E86826979C4700F47E4D /* ContactRoute.swift */,
 				B503E8772697AB2600F47E4D /* LoginRoute.swift */,
+				B5079BF726CFB595001D01E1 /* NotConnectionRoute.swift */,
+				B5079C0226CFB5A5001D01E1 /* RootRoute.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -613,7 +661,7 @@
 			children = (
 				B589E21C269708FA003B3B79 /* PushNavigationTransition.swift */,
 				B503E86B26979C8500F47E4D /* PushTransition.swift */,
-				B503E87A2697AB6700F47E4D /* LoginTransition.swift */,
+				B503E87A2697AB6700F47E4D /* RootTransition.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -1146,6 +1194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5079BED26CFAF2B001D01E1 /* NotConnectionViewController.xib in Resources */,
 				B55131D52685ED0A0043FAA2 /* ContactTableViewCell.xib in Resources */,
 				B570C1BD2682012B00F020A8 /* LoginViewController.xib in Resources */,
 				B55131CF2685DFBE0043FAA2 /* ContactViewController.xib in Resources */,
@@ -1400,10 +1449,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B503E87B2697AB6700F47E4D /* LoginTransition.swift in Sources */,
+				B503E87B2697AB6700F47E4D /* RootTransition.swift in Sources */,
 				B589E2192697083A003B3B79 /* Transition.swift in Sources */,
 				B5B58C9A26849B5E00652581 /* ContactViewController.swift in Sources */,
 				B5A59B3C2694B3A900C25076 /* ContactInfoViewModel.swift in Sources */,
+				B5079C0326CFB5A5001D01E1 /* RootRoute.swift in Sources */,
 				B55131D42685ED0A0043FAA2 /* ContactTableViewCell.swift in Sources */,
 				B5595C57268DCFB300A3B4BA /* ContactViewModelProtocol.swift in Sources */,
 				B503E8752697AB0600F47E4D /* LoginRouter.swift in Sources */,
@@ -1411,12 +1461,17 @@
 				B5942717269F017600D7E14C /* SharedSequence+Ext.swift in Sources */,
 				B503E86C26979C8500F47E4D /* PushTransition.swift in Sources */,
 				B5A59B342694998600C25076 /* RootViewModelProtocol.swift in Sources */,
+				B5079BCA26CFAEAD001D01E1 /* NotConnectionModule.swift in Sources */,
+				B5079BE026CFAEE5001D01E1 /* NotConnectionViewModelProtocol.swift in Sources */,
 				B5B1EBDD2692600400722955 /* LoginViewModelProtocol.swift in Sources */,
 				B503E8602697979300F47E4D /* ContactModule.swift in Sources */,
+				B5079BF826CFB595001D01E1 /* NotConnectionRoute.swift in Sources */,
+				B5079BBF26CFAE8C001D01E1 /* NotConnectionRouter.swift in Sources */,
 				B503E86626979BE500F47E4D /* RootModule.swift in Sources */,
 				B503E8722697AAF100F47E4D /* LoginModule.swift in Sources */,
 				B589E2112697067F003B3B79 /* ContactInfoRoute.swift in Sources */,
 				B503E86326979BCF00F47E4D /* RootRouter.swift in Sources */,
+				B5079BEC26CFAF2B001D01E1 /* NotConnectionViewController.swift in Sources */,
 				B589E22026970913003B3B79 /* Closable.swift in Sources */,
 				B570C1BC2682012B00F020A8 /* LoginViewController.swift in Sources */,
 				B5A59B37269499E500C25076 /* RootViewModel.swift in Sources */,
@@ -1435,6 +1490,7 @@
 				B589E22626970A45003B3B79 /* ContactInfoRouter.swift in Sources */,
 				B589E21D269708FB003B3B79 /* PushNavigationTransition.swift in Sources */,
 				B5B1EBE0269260C600722955 /* LoginViewModel.swift in Sources */,
+				B5079BD526CFAED3001D01E1 /* NotConnectionViewModel.swift in Sources */,
 				B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */,
 				B5A59B3F2694B40E00C25076 /* ContactInfoViewModelProtocol.swift in Sources */,
 				B503E8782697AB2600F47E4D /* LoginRoute.swift in Sources */,

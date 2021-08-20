@@ -60,6 +60,36 @@ class ContactInfoViewController: UIViewController {
                     .disposed(by: self.disposeBag)
             })
             .disposed(by: disposeBag)
+        
+        output.errorTracker
+            .drive(onNext: { error in
+                DispatchQueue.main.async {
+                    self.showAlert()
+                }
+            })
+            .disposed(by: disposeBag)
     }
 
+}
+
+//MARK: -Alert
+
+extension ContactInfoViewController {
+    private func showAlert() {
+        let alert = UIAlertController(
+            title: "Error!",
+            message: "The internet connection is disconnected. Turn on the internet and click OK.",
+            preferredStyle: .actionSheet
+        )
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: { _ in
+                    self.bindViewModel()
+                }
+            )
+        )
+        self.present(alert, animated: true, completion: nil)
+    }
 }

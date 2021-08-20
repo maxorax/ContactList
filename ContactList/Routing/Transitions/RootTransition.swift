@@ -1,13 +1,13 @@
 import UIKit
 
-class LoginTransition: NSObject {
+class RootTransition: NSObject {
     
     weak var viewController: UIViewController?
 }
 
 // MARK: - Transition
 
-extension LoginTransition: Transition {
+extension RootTransition: Transition {
 
     func open(_ viewController: UIViewController) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }

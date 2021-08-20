@@ -30,7 +30,6 @@ public class ContactUseCase: Domain.ContactUseCase {
         }
     }
     
-  
     public func getPhoto(photoUrl: String) -> Single<Data> {
         return Single.create{ single in
             DispatchQueue.global().async {
@@ -38,7 +37,8 @@ public class ContactUseCase: Domain.ContactUseCase {
                     single(.success(try Data(contentsOf: URL(string: photoUrl)!)))
                 }
                 catch let error {
-                    single(.failure(error))                }
+                    single(.failure(error))
+                }
             }
             return Disposables.create{ AF.cancelAllRequests() }
 

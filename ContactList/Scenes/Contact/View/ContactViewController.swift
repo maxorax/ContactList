@@ -12,7 +12,7 @@ final class ContactViewController: UIViewController {
     
     private var peoples: [Domain.People]
     private var viewModel: ContactViewModel!
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     init(_ viewModel: ContactViewModel) {
         self.viewModel = viewModel
@@ -66,12 +66,13 @@ final class ContactViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        output.errorTracker
-            .drive(onNext:{ error in
-                self.showAlert()
+        output.errorTracker.asObservable().take(1)
+            .subscribe(onNext:{ error in
+                DispatchQueue.main.async {
+                    self.showAlert()
+                }
             })
             .disposed(by: disposeBag)
-        
     }
 
 }

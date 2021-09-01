@@ -3,10 +3,10 @@ import RxSwift
 import GoogleSignIn
 
 public protocol SignInUseCase: GIDSignInDelegate {
-    var isSuccess: PublishSubject<Bool> { get }
+    var statusCode: PublishSubject<Int16> { get }
     
-    func signIn(vc: UIViewController) -> Single<Bool>
-    func restore() -> Single<Bool>
+    func signIn(vc: UIViewController) -> Single<Int16>
+    func restore() -> Single<Int16>
     func getAccessToken() -> Single<Domain.TokenContainer?>
     func signOut()
 }

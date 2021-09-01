@@ -5,10 +5,7 @@ import RxCocoa
 
 protocol LoginViewModelProtocol {
     associatedtype Input
-    associatedtype Output
-        
-    func openContactViewController()
-    
+            
     func transform(input: Input) 
 
 }

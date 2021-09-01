@@ -1,5 +1,8 @@
 import Foundation
 
 protocol NotConnectionViewModelProtocol {
-    func openRootController()
+    associatedtype Input
+    
+    func transform(input: Input)
+    
 }

@@ -17,18 +17,14 @@ class LoginViewModel: LoginViewModelProtocol {
         accessUseCase = container.accessUseCase
     }
     
-    func openContactViewController() { 
-        router.openContactModule()
-    }
-    
     func transform(input: Input) {
-        _ = input.signInTrigger
-            .flatMapLatest({ [weak self] _ -> Driver<Bool> in
+        input.signInTrigger
+            .flatMapLatest({ [weak self] _ -> Driver<Int16> in
                 guard let self = self else { return Driver.empty() }
                 
                 return self.signInUseCase
                     .signIn(vc: input.vc)
-                    .asDriver(onErrorJustReturn: false)
+                    .asDriver(onErrorJustReturn: 401)
                     
             })
             .flatMapLatest({ [weak self] _ -> Driver<Domain.TokenContainer?> in
@@ -47,7 +43,7 @@ class LoginViewModel: LoginViewModelProtocol {
                 return self.accessUseCase.storeToken(container:  accessToken).asDriverOnErrorJustComplete()
             })
             .drive(onNext:{ _ in
-                self.openContactViewController()
+                self.router.openContactModule()
             })
             .disposed(by: input.disposeBag)
     }
@@ -63,8 +59,5 @@ extension LoginViewModel {
         var signInTrigger: Driver<Void>
         var vc: UIViewController
         var disposeBag: DisposeBag
-    }
-    struct Output {
-        var isSignInSuccess: Driver<Bool>
     }
 }

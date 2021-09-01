@@ -10,6 +10,9 @@ class RootViewModel: RootViewModelProtocol {
 
     private let router: RootRouter.Routes
     private let errorTracker: ErrorTracker = ErrorTracker()
+    let retryTask = PublishSubject<Void>()
+    var closeNotConnection: () -> Void = {}
+    
 
     init(container: Container) {
         router = container.router
@@ -17,33 +20,25 @@ class RootViewModel: RootViewModelProtocol {
         accessUseCase = container.accessUseCase
     }
     
-    func openConctactController() {
-        router.openContactModule()
-    }
-    
-    func openLoginController() {
-        router.openLoginModule()
-    }
-    
-    func openNotConnectionController() {
-        router.openNotConnectionModule()
-    }
-    
-    func transform(input: Input) -> Output {
-        var isSuccess = false
-        _ = input.viewTrigger
-            .flatMapLatest { [weak self] _ -> Driver<Bool> in
+    func transform(input: Input) {
+        var statusCode: Int16 = 0
+        var errorCount = 0
+        let trigger = Driver.merge(
+            input.viewTrigger,
+            retryTask.asDriverOnErrorJustComplete()
+        )
+            trigger.flatMapLatest { [weak self] _ -> Driver<Int16> in
                 guard let self = self else { return Driver.empty() }
                 
                 return self.signInUseCase.restore()
                     .trackError(self.errorTracker)
                     .asDriverOnErrorJustComplete()
             }
-            .flatMapLatest { [weak self] value -> Driver<Domain.TokenContainer?> in
+            .flatMap { [weak self] value -> Driver<Domain.TokenContainer?> in
                 guard let self = self else { return Driver.empty() }
                 
-                isSuccess = value
-                guard value else {
+                statusCode = value
+                guard value == 200 else {
                     return Driver.just(nil)
                 }
                 
@@ -51,7 +46,7 @@ class RootViewModel: RootViewModelProtocol {
                     .trackError(self.errorTracker)
                     .asDriverOnErrorJustComplete()
             }
-            .flatMapLatest { [weak self] token in
+            .flatMap { [weak self] token in
                 guard let self = self else { return Driver.empty() }
                 
                 guard let accesstoken = token else {
@@ -65,16 +60,33 @@ class RootViewModel: RootViewModelProtocol {
             .drive(onNext:{ [weak self] ()  in
                 guard let self = self else { return }
                 
-                guard isSuccess else {
-                    self.openLoginController()
-                    return
+                switch statusCode {
+                case 200:
+                    guard errorCount == 0 else {
+                        self.closeNotConnection()
+                        self.router.openContactModule()
+                        return
+                        }
+                    
+                    self.router.openContactModule()
+                case 401:
+                    guard errorCount == 0 else {
+                        self.closeNotConnection()
+                        self.router.openLoginModule()
+                        return
+                    }
+                   
+                    self.router.openLoginModule()
+                default:
+                    guard errorCount == 0 else { return }
+                    
+                    self.router.openNotConnectionModule(delegate: self)
+                    errorCount = 1
                 }
-        
-               self.openConctactController()
+                
             })
             .disposed(by: input.disposeBag)
         
-        return Output(errorTracker: errorTracker)
     }
     
 }
@@ -89,7 +101,13 @@ extension RootViewModel {
         var viewTrigger: Driver<Void> = .just(())
         var disposeBag: DisposeBag
     }
-    struct Output{
-        var errorTracker: ErrorTracker
+}
+
+extension RootViewModel: NotConnectionDelegate {
+    func retry(trigger: Driver<Void>,  disposeBag: DisposeBag ,closeNotConnectionModule: @escaping () -> Void) {
+        self.closeNotConnection = closeNotConnectionModule
+        trigger.drive(onNext: {
+            self.retryTask.on(.next(()))
+        }).disposed(by: disposeBag)
     }
 }

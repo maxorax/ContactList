@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 
 class NotConnectionViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
@@ -6,7 +7,8 @@ class NotConnectionViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     private var viewModel: NotConnectionViewModel!
-    
+    let disposeBag = DisposeBag()
+
     init(_ viewModel: NotConnectionViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -18,10 +20,14 @@ class NotConnectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bindViewModel()
     }
 
-    @IBAction func pushButton(_ sender: Any) {
-        viewModel.openRootController()
+    private func bindViewModel() {
+        let retryTrigger = button.rx.tap.asDriver().mapToVoid()
+        let input = NotConnectionViewModel.Input(retryTrigger: retryTrigger, disposeBag: disposeBag)
+        viewModel.transform(input: input)
     }
     
 }

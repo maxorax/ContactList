@@ -5,9 +5,8 @@ import RxSwift
 import Domain
 
 public class SignInUseCase: NSObject, Domain.SignInUseCase {
-    
-    public var isSuccess: PublishSubject<Bool> = PublishSubject()
-    
+
+    public var statusCode: PublishSubject<Int16> = PublishSubject()
     
     public override init() {
         super.init()
@@ -17,14 +16,14 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
         GIDSignIn.sharedInstance()?.scopes = Domain.Constants.scopesAPI
     }
     
-    public func signIn(vc: UIViewController) -> Single<Bool> {
+    public func signIn(vc: UIViewController) -> Single<Int16> {
         GIDSignIn.sharedInstance()?.presentingViewController = vc
-        return isSuccess.take(1).asSingle()
+        return statusCode.take(1).asSingle()
     }
     
-    public func restore() -> Single<Bool> {
+    public func restore() -> Single<Int16> {
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-        return isSuccess.take(1).asSingle()
+        return statusCode.take(1).asSingle()
     }
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
@@ -33,15 +32,15 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
             if (error as NSError)
                 .code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
                 DispatchQueue.main.async {
-                    self.isSuccess.onNext(false)
+                    self.statusCode.onNext(401)
                 }
             } else {
-                self.isSuccess.onError(error)
+                self.statusCode.onNext(499)
             }
             return
         }
         DispatchQueue.main.async {
-            self.isSuccess.onNext(true)
+            self.statusCode.onNext(200)
         }
     }
     
@@ -55,7 +54,9 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
                 single in
                
                 do{
-                    guard let accessToken =  GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken else {
+                    guard
+                        let accessToken =  GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken
+                    else {
                         throw NSError()
                     }
                     

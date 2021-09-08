@@ -6,14 +6,10 @@ import Domain
 
 class NotConnectionViewModel: NotConnectionViewModelProtocol {
     private let router: NotConnectionRouter.Routes
-    private let signInUseCase: Domain.SignInUseCase
-    private let accessUseCase: Domain.AccessUseCase
     private let delegate: NotConnectionDelegate
         
     init(container: Container) {
         router = container.router
-        accessUseCase = container.accessUseCase
-        signInUseCase = container.signInUseCase
         delegate = container.delegate
     }
     
@@ -29,8 +25,6 @@ class NotConnectionViewModel: NotConnectionViewModelProtocol {
 extension NotConnectionViewModel {
     struct Container {
         let router: NotConnectionRouter
-        let signInUseCase: Domain.SignInUseCase
-        let accessUseCase: Domain.AccessUseCase
         let delegate: NotConnectionDelegate
     }
     struct Input {

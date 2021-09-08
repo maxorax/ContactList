@@ -4,7 +4,6 @@ import RxCocoa
 import Domain
 
 struct ContactViewModel: ContactViewModelProtocol {
-    
     private let router: ContactRouter.Routes
     private let errorTracker: ErrorTracker = ErrorTracker()
     private let contactUseCase: Domain.ContactUseCase
@@ -48,7 +47,6 @@ struct ContactViewModel: ContactViewModelProtocol {
     func openLoginController() {
         router.openLoginModule()
     }
-    
 }
 
 extension ContactViewModel {
@@ -70,8 +68,9 @@ extension ContactViewModel {
     
 }
 
+//MARK:-Delegate
+
 extension ContactViewModel: ContactTableViewCellDelegate {
-    
     func downloadImage(url: String) -> Driver<Data> {
         return contactUseCase.getPhoto(photoUrl: url)
             .trackError(errorTracker)

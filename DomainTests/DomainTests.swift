@@ -1,10 +1,3 @@
-//
-//  DomainTests.swift
-//  DomainTests
-//
-//  Created by Maxorax on 26.07.2021.
-//
-
 import XCTest
 @testable import Domain
 

@@ -7,7 +7,6 @@ protocol LoginViewModelProtocol {
     associatedtype Input
             
     func transform(input: Input) 
-
 }
 
 

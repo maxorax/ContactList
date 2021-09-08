@@ -94,8 +94,6 @@ extension ContactViewController: UITableViewDataSource {
         cell.setup(people: self.peoples[indexPath.row], index: indexPath.row, output: viewModel)
         return cell
     }
-
-    
 }
 
 //MARK: -Table view delegate
@@ -104,7 +102,6 @@ extension ContactViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.openSelectedCells(people: peoples[indexPath.row])
     }
-    
 }
 
 //MARK: -Alert

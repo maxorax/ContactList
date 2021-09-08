@@ -1,7 +1,7 @@
 import Foundation
 import Domain
 
-public class SignInUseCaseProvider:  Domain.SignInUseCaseProvider{
+public class SignInUseCaseProvider: Domain.SignInUseCaseProvider{
     public static let shared = SignInUseCaseProvider()
     
     let signInUseCase: Domain.SignInUseCase

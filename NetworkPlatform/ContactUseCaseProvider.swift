@@ -12,7 +12,6 @@ public class ContactUseCaseProvider: Domain.ContactUseCaseProvider {
     
     public func makeContactUseCase() -> Domain.ContactUseCase {
         return contactUseCase
-
     }
     
 }

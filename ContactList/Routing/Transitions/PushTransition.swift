@@ -7,7 +7,6 @@ class PushTransition: NSObject {
 // MARK: - Transition
 
 extension PushTransition: Transition {
-
     func open(_ viewController: UIViewController) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         

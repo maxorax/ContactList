@@ -46,12 +46,9 @@ class ContactTableViewCell: UITableViewCell {
         let imageData = output.downloadImage(url: photoUrl)
         imageData.drive(onNext: { data in
             DispatchQueue.main.async {
-              
                 guard self.tag == index  else { return }
                 
                 self.photoImageView.image = UIImage(data: data)
-                self.setNeedsDisplay()
-                self.layoutIfNeeded()
                 self.indicator.stopAnimating()
             }
         }).disposed(by: self.disposeBag)

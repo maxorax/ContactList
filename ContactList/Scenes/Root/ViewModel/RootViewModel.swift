@@ -53,7 +53,7 @@ class RootViewModel: RootViewModelProtocol {
                     return Driver.just(())
                 }
                 
-                return self.accessUseCase.storeToken(container:  accesstoken)
+                return self.accessUseCase.storeToken(container: accesstoken)
                     .trackError(self.errorTracker)
                     .asDriverOnErrorJustComplete()
             }

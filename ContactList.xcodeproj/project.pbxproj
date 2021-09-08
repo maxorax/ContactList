@@ -10,7 +10,6 @@
 		3BDC7EE8D38EAD7CC3646A4A /* Pods_SignInPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3EE6F1F1572CA3AB99E57D /* Pods_SignInPlatform.framework */; };
 		764A0A85A0704FCB9AACF1FD /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872D9F3802AED02A57A6BA04 /* Pods_NetworkPlatform.framework */; };
 		92F4EB1E6D8C6CA75DBC5AAD /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70C9FC936396B33140A2858 /* Pods_Domain.framework */; };
-		B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5029C21268DABEC0073E9A8 /* Constants.swift */; };
 		B503E8602697979300F47E4D /* ContactModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E85F2697979300F47E4D /* ContactModule.swift */; };
 		B503E86326979BCF00F47E4D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E86226979BCF00F47E4D /* RootRouter.swift */; };
 		B503E86626979BE500F47E4D /* RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503E86526979BE500F47E4D /* RootModule.swift */; };
@@ -232,7 +231,6 @@
 		7BF07A9FA61A45C59DB21272 /* Pods-SignInPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInPlatform.release.xcconfig"; path = "Target Support Files/Pods-SignInPlatform/Pods-SignInPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		872D9F3802AED02A57A6BA04 /* Pods_NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148388CF0A76810583060AC /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
-		B5029C21268DABEC0073E9A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B503E85F2697979300F47E4D /* ContactModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModule.swift; sourceTree = "<group>"; };
 		B503E86226979BCF00F47E4D /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		B503E86526979BE500F47E4D /* RootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModule.swift; sourceTree = "<group>"; };
@@ -461,22 +459,6 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		B5029C1F268DA6EF0073E9A8 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				B5029C20268DA6F80073E9A8 /* Constants */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		B5029C20268DA6F80073E9A8 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				B5029C21268DABEC0073E9A8 /* Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		B5079BB226CFAE27001D01E1 /* NotConnection */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,7 +540,6 @@
 				B5476C4A26A31E7900A73EAA /* PrimitiveSequenceType+Ext.swift */,
 				B5942716269F017600D7E14C /* SharedSequence+Ext.swift */,
 				B589E20E2697063B003B3B79 /* Routing */,
-				B5029C1F268DA6EF0073E9A8 /* Shared */,
 				B5029C1E268DA6980073E9A8 /* Scenes */,
 				B57CC102268DADBD00B25C55 /* Application */,
 				B57CC101268DAD7600B25C55 /* Resourses */,
@@ -1499,7 +1480,6 @@
 				B53B58AC26DF963E00149B64 /* NotConnectionRouter.swift in Sources */,
 				B5B1EBE0269260C600722955 /* LoginViewModel.swift in Sources */,
 				B5079BD526CFAED3001D01E1 /* NotConnectionViewModel.swift in Sources */,
-				B5029C22268DABEC0073E9A8 /* Constants.swift in Sources */,
 				B5A59B3F2694B40E00C25076 /* ContactInfoViewModelProtocol.swift in Sources */,
 				B503E8782697AB2600F47E4D /* LoginRoute.swift in Sources */,
 			);

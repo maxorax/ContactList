@@ -49,7 +49,6 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
     }
     
     public func getAccessToken() -> Single<Domain.TokenContainer?> {
-            
             return Single.create{
                 single in
                
@@ -68,7 +67,6 @@ public class SignInUseCase: NSObject, Domain.SignInUseCase {
                 
                 return Disposables.create ()
             }
-        
     }
     
     public func signOut() {

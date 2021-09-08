@@ -25,13 +25,13 @@ class LoginViewModel: LoginViewModelProtocol {
                 return self.signInUseCase
                     .signIn(vc: input.vc)
                     .asDriver(onErrorJustReturn: 401)
-                    
             })
             .flatMapLatest({ [weak self] _ -> Driver<Domain.TokenContainer?> in
                 guard let self = self else { return Driver.empty() }
                 
-                return self.signInUseCase.getAccessToken()
-                .asDriverOnErrorJustComplete()
+                return self.signInUseCase
+                    .getAccessToken()
+                    .asDriverOnErrorJustComplete()
             })
             .flatMapLatest({ [weak self] token -> Driver<Void> in
                 guard let self = self else { return Driver.empty() }
@@ -40,7 +40,9 @@ class LoginViewModel: LoginViewModelProtocol {
                     return Driver.just(())
                 }
                 
-                return self.accessUseCase.storeToken(container:  accessToken).asDriverOnErrorJustComplete()
+                return self.accessUseCase
+                    .storeToken(container: accessToken)
+                    .asDriverOnErrorJustComplete()
             })
             .drive(onNext:{ _ in
                 self.router.openContactModule()

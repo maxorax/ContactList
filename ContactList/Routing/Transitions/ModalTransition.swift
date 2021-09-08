@@ -7,8 +7,8 @@ class ModalTransition: NSObject {
 // MARK: - Transition
 
 extension ModalTransition: Transition {
-
     func open(_ viewController: UIViewController) {
+        viewController.modalPresentationStyle = .overFullScreen
         self.viewController?.show(viewController, sender: self)
     }
 

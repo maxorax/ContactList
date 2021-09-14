@@ -2,37 +2,50 @@ import Foundation
 import UIKit.UIViewController
 import RxSwift
 import RxCocoa
+import Domain
 
 class LoginViewModel: LoginViewModelProtocol {
   
-    private let gIDSignInManager: GIDSignInManager = GIDSignInManager.shared
+    private let signInUseCase: Domain.SignInUseCase
+    private let accessUseCase: Domain.AccessUseCase
+
     private let router: LoginRouter.Routes
     
     init(container: Container) {
         router = container.router
-    }
-    
-    func presentingViewController(vc: UIViewController) {
-        gIDSignInManager.presentingViewController(vc: vc)
-    }
-    
-    func openContactViewController() { 
-        router.openContactModule()
+        signInUseCase = container.signInUseCase
+        accessUseCase = container.accessUseCase
     }
     
     func transform(input: Input) {
-        _ = input.signInTrigger
-            .flatMapLatest({ _  in
-                return self.gIDSignInManager
+        input.signInTrigger
+            .flatMapLatest({ [weak self] _ -> Driver<Int16> in
+                guard let self = self else { return Driver.empty() }
+                
+                return self.signInUseCase
                     .signIn(vc: input.vc)
-                    .asDriver(onErrorJustReturn: false)
+                    .asDriver(onErrorJustReturn: 401)
             })
-            .drive(onNext:{ value in
-                guard value == true else {
-                    return
+            .flatMapLatest({ [weak self] _ -> Driver<Domain.TokenContainer?> in
+                guard let self = self else { return Driver.empty() }
+                
+                return self.signInUseCase
+                    .getAccessToken()
+                    .asDriverOnErrorJustComplete()
+            })
+            .flatMapLatest({ [weak self] token -> Driver<Void> in
+                guard let self = self else { return Driver.empty() }
+                
+                guard let accessToken = token else {
+                    return Driver.just(())
                 }
-            
-                self.openContactViewController()
+                
+                return self.accessUseCase
+                    .storeToken(container: accessToken)
+                    .asDriverOnErrorJustComplete()
+            })
+            .drive(onNext:{ _ in
+                self.router.openContactModule()
             })
             .disposed(by: input.disposeBag)
     }
@@ -40,14 +53,13 @@ class LoginViewModel: LoginViewModelProtocol {
 
 extension LoginViewModel {
     struct Container{
-        var router: LoginRouter
+        let router: LoginRouter
+        let signInUseCase: Domain.SignInUseCase
+        let accessUseCase: Domain.AccessUseCase
     }
     struct Input {
         var signInTrigger: Driver<Void>
         var vc: UIViewController
         var disposeBag: DisposeBag
-    }
-    struct Output {
-        var isSignInSuccess: Driver<Bool>
     }
 }

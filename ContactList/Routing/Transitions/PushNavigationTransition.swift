@@ -7,7 +7,6 @@ class PushNavigationTransition: NSObject {
 // MARK: - Transition
 
 extension PushNavigationTransition: Transition {
-
     func open(_ viewController: UIViewController) {
         self.viewController?.navigationController?.delegate = self
         self.viewController?.navigationController?.pushViewController(viewController, animated: true)

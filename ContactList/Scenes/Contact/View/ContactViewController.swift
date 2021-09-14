@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxViewController
+import Domain
 
 
 final class ContactViewController: UIViewController {
@@ -9,9 +10,9 @@ final class ContactViewController: UIViewController {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
     
-    private var peoples: [People]
+    private var peoples: [Domain.People]
     private var viewModel: ContactViewModel!
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     init(_ viewModel: ContactViewModel) {
         self.viewModel = viewModel
@@ -65,12 +66,13 @@ final class ContactViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        output.errorTracker
-            .drive(onNext:{ error in
-                self.showAlert()
+        output.errorTracker.asObservable().take(1)
+            .subscribe(onNext:{ error in
+                DispatchQueue.main.async {
+                    self.showAlert()
+                }
             })
             .disposed(by: disposeBag)
-        
     }
 
 }
@@ -92,8 +94,6 @@ extension ContactViewController: UITableViewDataSource {
         cell.setup(people: self.peoples[indexPath.row], index: indexPath.row, output: viewModel)
         return cell
     }
-
-    
 }
 
 //MARK: -Table view delegate
@@ -102,7 +102,6 @@ extension ContactViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.openSelectedCells(people: peoples[indexPath.row])
     }
-    
 }
 
 //MARK: -Alert

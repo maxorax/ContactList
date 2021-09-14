@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Domain
 
 protocol ContactTableViewCellDelegate {
     func downloadImage(url: String) -> Driver<Data>
@@ -32,7 +33,7 @@ class ContactTableViewCell: UITableViewCell {
         
     }
     
-    func setup(people: People, index: Int ,output: ContactTableViewCellDelegate ) {
+    func setup(people: Domain.People, index: Int ,output: ContactTableViewCellDelegate ) {
         indicator.startAnimating()
         fullNameLabel.text = people.names[0].displayName
         phoneNumberLabel.text = people.phoneNumbers?[0].value ?? "No number"
@@ -48,8 +49,6 @@ class ContactTableViewCell: UITableViewCell {
                 guard self.tag == index  else { return }
                 
                 self.photoImageView.image = UIImage(data: data)
-                self.setNeedsDisplay()
-                self.layoutIfNeeded()
                 self.indicator.stopAnimating()
             }
         }).disposed(by: self.disposeBag)

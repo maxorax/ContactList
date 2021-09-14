@@ -1,5 +1,6 @@
 import Foundation
 import RxSwift
+import Domain
 
 protocol ContactViewModelProtocol {
     associatedtype Input
@@ -7,7 +8,7 @@ protocol ContactViewModelProtocol {
     
     func signOut()
     
-    func openSelectedCells(people: People)
+    func openSelectedCells(people: Domain.People)
     
     func openLoginController()
     

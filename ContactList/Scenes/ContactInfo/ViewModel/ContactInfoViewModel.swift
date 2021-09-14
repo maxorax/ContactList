@@ -1,51 +1,48 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import Domain
 
 class ContactInfoViewModel: ContactInfoViewModelProtocol {
     
-    let networkManager = NetworkManager()
-    
-    var people: People
+    private let contactUseCase: Domain.ContactUseCase
+    private var people: Domain.People
     private let router: ContactInfoRouter.Routes
+    private let errorTracker: ErrorTracker = ErrorTracker()
+
     
     init(container: Container) {
         router = container.router
-        self.people = container.people
+        people = container.people
+        contactUseCase = container.contactUseCase
         
     }
     
-    func getContact(name: String, phoneNumber: String?, email: String, photoUrl: String? ) -> Single<People> {
+    func getContact(people: Domain.People) -> Single<Domain.People> {
         return Single.create{
             single in
-            let name: Name = Name(displayName: name)
-            let phoneNumber = PhoneNumber(value: phoneNumber ?? "No number")
-            let email = EmailAddress(value: email)
-            let photo = photoUrl != nil ? [Photo(url: photoUrl!)] : nil
-            let people = People(
-                names: [name],
-                phoneNumbers: [phoneNumber],
-                photos: photo,
-                emailAddresses: [email]
+            let contact = Domain.People(
+                names: people.names,
+                phoneNumbers: people.phoneNumbers
+                    ?? [Domain.PhoneNumber(value: "No number")],
+                photos: people.photos ?? [Domain.Photo(url: "")],
+                emailAddresses: people.emailAddresses
             )
-            single(.success(people))
+            single(.success(contact))
             return Disposables.create()
         }
     }
     
     func transform(input: Input) -> Output {
-        let people = self.getContact(
-            name: self.people.names[0].displayName,
-            phoneNumber: self.people.phoneNumbers?[0].value,
-            email: self.people.emailAddresses[0].value,
-            photoUrl: self.people.photos?[0].url
-            )
+        let people = self.getContact( people: self.people)
+            .trackError(errorTracker)
             .asDriverOnErrorJustComplete()
-        return Output(people: people)
+        return Output(people: people, errorTracker: errorTracker)
     }
     
     func downloadImage(url: String) -> Driver<Data> {
-        return networkManager.getPhoto(photoUrl: url)
+        return contactUseCase.getPhoto(photoUrl: url)
+            .trackError(errorTracker)
             .asDriverOnErrorJustComplete()
     }
     
@@ -54,13 +51,15 @@ class ContactInfoViewModel: ContactInfoViewModelProtocol {
 extension ContactInfoViewModel {
     struct Container {
         let router: ContactInfoRouter
-        let people: People
+        let people: Domain.People
+        let contactUseCase: Domain.ContactUseCase
     }
     struct Input {
         let peopleTrigger: Driver<Void>
     }
     struct Output {
-        var people: Driver<People>
+        var people: Driver<Domain.People>
+        var errorTracker: ErrorTracker
     }
 }
 
